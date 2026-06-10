@@ -47,8 +47,13 @@ jobs:
                   indent=2,
                   auto_compact=True
               )
+              xml = ttl.with_suffix(".xml")
+              g.serialize(
+                  destination=THISDIR.absolute() / 'data' / xml.name ,
+                  format="xml",
+                  indent=2
+              )
 
-              print(f"{ttl} -> {jsonld}")
           EOF
 
       - name: Deploy
