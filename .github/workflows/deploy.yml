@@ -31,13 +31,13 @@ jobs:
       - name: Convert TTL to JSON-LD and XML
         run: |
           pip install rdflib
+          mkdir -p ${{ env.OUTPUT_DIR }}
           sudo chmod 777 ${{ env.OUTPUT_DIR }}
           python <<'EOF'
           from pathlib import Path
           from rdflib import Graph
 
           outdir = Path("${{ env.OUTPUT_DIR }}")
-          outdir.mkdir(parents=True, exist_ok=True)
 
           for ttl in outdir.rglob("*.ttl"):
               g = Graph()
