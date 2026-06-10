@@ -71,7 +71,7 @@ jobs:
               <a href="$1.json" class="myButton">.json</a>
               <a href="$1.xml" class="myButton">.xml</a>
             </div>
-            #gs' index.html
+            #gs' ${{ env.OUTPUT_DIR }}/index.html
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
