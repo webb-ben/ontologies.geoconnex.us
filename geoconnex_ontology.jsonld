@@ -39,127 +39,20 @@
   },
   "@graph": [
     {
-      "@id": "schema:name",
-      "@type": "owl:AnnotationProperty"
+      "@id": "hyf:HY_HydrographicNetwork",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_HydroFeature"
+      }
     },
     {
-      "@id": "schema:polygon",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "schema:GeoShape"
-      },
-      "rdfs:range": {
-        "@id": "xsd:string"
+      "@id": "http://schema.org/WebPage",
+      "owl:equivalentClass": {
+        "@id": "schema:WebPage"
       },
       "skos:editorialNote": {
         "@language": "en",
-        "@value": "Prefer geo:asWKT for machine spatial reasoning; keep schema:polygon for Schema.org compatibility."
-      }
-    },
-    {
-      "@id": "hyf:HY_HydrometricNetwork",
-      "rdfs:subClassOf": {
-        "@id": "hyf:HY_HydrographicNetwork"
-      }
-    },
-    {
-      "@id": "schema:encodingFormat",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      },
-      "skos:closeMatch": {
-        "@id": "dcat:mediaType"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Schema.org encodingFormat is commonly a text media type or URL. Keep it as a datatype property for Geoconnex exports; add dcat:mediaType separately when using controlled media-type resources."
-      }
-    },
-    {
-      "@id": "schema:SearchAction",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:Action"
-      }
-    },
-    {
-      "@id": "schema:DataDownload",
-      "rdfs:subClassOf": {
-        "@id": "dcat:Distribution"
-      }
-    },
-    {
-      "@id": "hyf:distanceExpression",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "hyf:HY_DistanceDescription"
-      },
-      "rdfs:range": {
-        "@id": "hyf:HY_DistanceFromReferent"
-      }
-    },
-    {
-      "@id": "schema:line",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "schema:GeoShape"
-      },
-      "rdfs:range": {
-        "@id": "xsd:string"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Prefer geo:asWKT for machine spatial reasoning; keep schema:line for Schema.org compatibility."
-      }
-    },
-    {
-      "@id": "schema:temporalCoverage",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Schema.org temporalCoverage accepts flexible text, dates, and intervals. If the data can be normalized, also add dcterms:temporal with a typed PeriodOfTime node."
-      }
-    },
-    {
-      "@id": "schema:BreadcrumbList",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:ItemList"
-      }
-    },
-    {
-      "@id": "rdfs:ContainerMembershipProperty",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "rdf:Property"
-      }
-    },
-    {
-      "@id": "geoconnex:MeasuredVariable",
-      "@type": "owl:Class",
-      "owl:unionOf": {
-        "@list": [
-          {
-            "@id": "schema:PropertyValue"
-          },
-          {
-            "@id": "sosa:ObservableProperty"
-          },
-          {
-            "@id": "qudt:QuantityKind"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "schema:NewsArticle",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:Article"
+        "@value": "Normalize to https://schema.org/WebPage in Geoconnex exports."
       }
     },
     {
@@ -177,24 +70,53 @@
       }
     },
     {
-      "@id": "hyf:upstreamWaterBody",
+      "@id": "schema:governmentAgency",
       "@type": "owl:ObjectProperty",
-      "owl:inverseOf": {
-        "@id": "hyf:downstreamWaterBody"
+      "rdfs:range": {
+        "@id": "schema:GovernmentOrganization"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "This is a property, not a class. Move it from the class inventory to the property inventory."
       }
     },
     {
-      "@id": "schema:measurementTechnique",
-      "@type": "owl:ObjectProperty",
-      "rdfs:subPropertyOf": {
-        "@id": "sosa:usedProcedure"
+      "@id": "schema:EntryPoint",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "hyf:HY_DistanceDescription",
+      "@type": "owl:Class",
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "This is a class-like HY_Features term. Move it from the property inventory to the class inventory if it appears as a property."
+      }
+    },
+    {
+      "@id": "schema:ImageObject",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:MediaObject"
+      }
+    },
+    {
+      "@id": "schema:longitude",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "schema:GeoCoordinates"
+      },
+      "rdfs:range": {
+        "@id": "xsd:decimal"
       }
     },
     {
       "@id": "schema:logo",
       "@type": "owl:ObjectProperty",
       "rdfs:range": {
-        "@id": "_:n977469a27be54653bdd44b90a2f9c080b1"
+        "@id": "_:n0b097c64475c4e90b30e855bd9510381b1"
       },
       "skos:editorialNote": {
         "@language": "en",
@@ -202,7 +124,7 @@
       }
     },
     {
-      "@id": "_:n977469a27be54653bdd44b90a2f9c080b1",
+      "@id": "_:n0b097c64475c4e90b30e855bd9510381b1",
       "@type": "owl:Class",
       "owl:unionOf": {
         "@list": [
@@ -216,13 +138,22 @@
       }
     },
     {
-      "@id": "schema:Place",
+      "@id": "schema:description",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "sf:Polygon",
+      "rdfs:subClassOf": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "hyf:HY_HydroFeature",
       "rdfs:subClassOf": {
         "@id": "geo:Feature"
       },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Use schema:Place for web discovery and GeoSPARQL geo:Feature/geo:Geometry for formal spatial reasoning."
+      "skos:closeMatch": {
+        "@id": "hyfo:WaterFeature"
       }
     },
     {
@@ -237,219 +168,10 @@
       }
     },
     {
-      "@id": "schema:EntryPoint",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:Intangible"
-      }
-    },
-    {
-      "@id": "rdfs:Class",
-      "@type": "owl:Class"
-    },
-    {
-      "@id": "hyf-app:HY_Catchment",
-      "owl:equivalentClass": {
-        "@id": "hyf:HY_Catchment"
-      }
-    },
-    {
-      "@id": "hyf:interpolative",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "hyf:HY_IndirectPosition"
-      },
-      "rdfs:range": {
-        "@id": "xsd:boolean"
-      }
-    },
-    {
-      "@id": "schema:longitude",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "schema:GeoCoordinates"
-      },
-      "rdfs:range": {
-        "@id": "xsd:decimal"
-      }
-    },
-    {
-      "@id": "http://schema.org/WebSite",
-      "owl:equivalentClass": {
-        "@id": "schema:WebSite"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/WebSite in Geoconnex exports."
-      }
-    },
-    {
-      "@id": "schema:GeoCoordinates",
-      "skos:closeMatch": {
-        "@id": "sf:Point"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Do not make this equivalent to sf:Point; Schema.org coordinates are a lightweight web metadata shape, while Simple Features points are formal geometries."
-      }
-    },
-    {
-      "@id": "schema:propertyID",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:subPropertyOf": {
-        "@id": "dcterms:identifier"
-      }
-    },
-    {
-      "@id": "schema:GovernmentOrganization",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:Organization"
-      }
-    },
-    {
-      "@id": "hyf-app:HY_HydrometricFeature",
-      "skos:closeMatch": {
-        "@id": "hyf:HY_HydrometricFeature"
-      }
-    },
-    {
-      "@id": "schema:geo",
+      "@id": "qudt:hasUnit",
       "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "schema:Place"
-      },
       "rdfs:range": {
-        "@id": "_:n977469a27be54653bdd44b90a2f9c080b4"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Use schema:geo directly for Schema.org-facing coordinate or shape summaries. Use geo:hasGeometry or geo:defaultGeometry for formal GeoSPARQL geometries."
-      }
-    },
-    {
-      "@id": "_:n977469a27be54653bdd44b90a2f9c080b4",
-      "@type": "owl:Class",
-      "owl:unionOf": {
-        "@list": [
-          {
-            "@id": "schema:GeoCoordinates"
-          },
-          {
-            "@id": "schema:GeoShape"
-          }
-        ]
-      }
-    },
-    {
-      "@id": "sf:Point",
-      "rdfs:subClassOf": {
-        "@id": "geo:Geometry"
-      }
-    },
-    {
-      "@id": "sf:Polygon",
-      "rdfs:subClassOf": {
-        "@id": "geo:Geometry"
-      }
-    },
-    {
-      "@id": "rdf:Property",
-      "@type": "owl:Class",
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "RDF's built-in class of properties. Do not use it as a catch-all declaration for Geoconnex predicates; classify predicates as owl:ObjectProperty, owl:DatatypeProperty, or owl:AnnotationProperty where possible."
-      }
-    },
-    {
-      "@id": "http://schema.org/logo",
-      "owl:equivalentProperty": {
-        "@id": "schema:logo"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/logo in Geoconnex exports."
-      }
-    },
-    {
-      "@id": "hyf:HY_IndirectPosition",
-      "@type": "owl:Class",
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "This is a class-like HY_Features term. Move it from the property inventory to the class inventory if it appears as a property."
-      }
-    },
-    {
-      "@id": "sf:LineString",
-      "rdfs:subClassOf": {
-        "@id": "geo:Geometry"
-      }
-    },
-    {
-      "@id": "hyf:HY_Catchment",
-      "rdfs:subClassOf": {
-        "@id": "hyf:HY_HydroFeature"
-      }
-    },
-    {
-      "@id": "hyf:HY_DistanceFromReferent",
-      "@type": "owl:Class",
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "This is a class-like HY_Features term. Move it from the property inventory to the class inventory if it appears as a property."
-      }
-    },
-    {
-      "@id": "schema:measurementMethod",
-      "@type": "owl:ObjectProperty",
-      "rdfs:subPropertyOf": {
-        "@id": "sosa:usedProcedure"
-      }
-    },
-    {
-      "@id": "ssn-system:frequency",
-      "@type": "owl:ObjectProperty",
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Use for sampling or operating frequency when the subject is an SSN/SOSA system, sensor, or procedure. Consider pairing with QUDT for numeric value and unit."
-      }
-    },
-    {
-      "@id": "http://schema.org/ListItem",
-      "owl:equivalentClass": {
-        "@id": "schema:ListItem"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/ListItem in Geoconnex exports."
-      }
-    },
-    {
-      "@id": "schema:PropertyValue",
-      "skos:closeMatch": {
-        "@id": "qudt:QuantityValue"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Use schema:PropertyValue for web markup and QUDT QuantityValue for formal numeric value/unit modeling. Avoid global equivalence because Schema.org PropertyValue is broader."
-      }
-    },
-    {
-      "@id": "schema:coordinates",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Prefer geo:asWKT or schema:latitude/schema:longitude where possible. schema:coordinates is useful as a lightweight fallback."
-      }
-    },
-    {
-      "@id": "rdf:type",
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "RDF's built-in type predicate. It is intentionally not redeclared as a Geoconnex object or datatype property; use it directly for class membership."
+        "@id": "qudt:Unit"
       }
     },
     {
@@ -460,245 +182,16 @@
       }
     },
     {
-      "@id": "hyf:HY_HydroFeature",
-      "rdfs:subClassOf": {
-        "@id": "geo:Feature"
-      },
-      "skos:closeMatch": {
-        "@id": "hyfo:WaterFeature"
+      "@id": "hyf-app:HY_Catchment",
+      "owl:equivalentClass": {
+        "@id": "hyf:HY_Catchment"
       }
     },
     {
-      "@id": "hyf:HY_DistanceDescription",
-      "@type": "owl:Class",
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "This is a class-like HY_Features term. Move it from the property inventory to the class inventory if it appears as a property."
-      }
-    },
-    {
-      "@id": "qudt:hasUnit",
-      "@type": "owl:ObjectProperty",
-      "rdfs:range": {
-        "@id": "qudt:Unit"
-      }
-    },
-    {
-      "@id": "owl:TransitiveProperty",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "owl:ObjectProperty"
-      }
-    },
-    {
-      "@id": "hyf:HY_WaterBody",
-      "rdfs:subClassOf": [
-        {
-          "@id": "hyf:HY_HydroFeature"
-        },
-        {
-          "@id": "hyfo:SurfaceWaterFeature"
-        }
-      ]
-    },
-    {
-      "@id": "schema:publisher",
-      "@type": "owl:ObjectProperty",
+      "@id": "schema:propertyID",
+      "@type": "owl:DatatypeProperty",
       "rdfs:subPropertyOf": {
-        "@id": "dcterms:publisher"
-      }
-    },
-    {
-      "@id": "rdfs:Datatype",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "rdfs:Class"
-      }
-    },
-    {
-      "@id": "sf:GeometryCollection",
-      "rdfs:subClassOf": {
-        "@id": "geo:Geometry"
-      }
-    },
-    {
-      "@id": "schema:value",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:range": {
-        "@id": "rdfs:Literal"
-      },
-      "skos:closeMatch": {
-        "@id": "qudt:numericValue"
-      }
-    },
-    {
-      "@id": "schema:ImageObject",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:MediaObject"
-      }
-    },
-    {
-      "@id": "hyf:linearElement",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "hyf:HY_IndirectPosition"
-      },
-      "rdfs:range": {
-        "@id": "hyf:HY_FlowPath"
-      }
-    },
-    {
-      "@id": "schema:GeoShape",
-      "skos:closeMatch": {
-        "@id": "geo:Geometry"
-      }
-    },
-    {
-      "@id": "hyf-app:HY_HydrometricNetwork",
-      "skos:closeMatch": {
-        "@id": "hyf:HY_HydrometricNetwork"
-      }
-    },
-    {
-      "@id": "schema:distribution",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "schema:Dataset"
-      },
-      "rdfs:range": {
-        "@id": "schema:DataDownload"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "dcat:distribution"
-      }
-    },
-    {
-      "@id": "schema:variableMeasured",
-      "@type": "owl:ObjectProperty",
-      "rdfs:range": {
-        "@id": "geoconnex:MeasuredVariable"
-      }
-    },
-    {
-      "@id": "schema:Person",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:Thing"
-      }
-    },
-    {
-      "@id": "geo:asWKT",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "geo:Geometry"
-      },
-      "rdfs:range": {
-        "@id": "geo:wktLiteral"
-      }
-    },
-    {
-      "@id": "schema:WebSite",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:CreativeWork"
-      }
-    },
-    {
-      "@id": "hyf:distanceDescription",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "hyf:HY_IndirectPosition"
-      },
-      "rdfs:range": {
-        "@id": "hyf:HY_DistanceDescription"
-      }
-    },
-    {
-      "@id": "hyf:HY_CatchmentDivide",
-      "rdfs:subClassOf": {
-        "@id": "hyf:HY_CatchmentRealization"
-      }
-    },
-    {
-      "@id": "owl:SymmetricProperty",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "owl:ObjectProperty"
-      }
-    },
-    {
-      "@id": "http://schema.org/Organization",
-      "owl:equivalentClass": {
-        "@id": "schema:Organization"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/Organization in Geoconnex exports."
-      }
-    },
-    {
-      "@id": "http://schema.org/BreadcrumbList",
-      "owl:equivalentClass": {
-        "@id": "schema:BreadcrumbList"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/BreadcrumbList in Geoconnex exports."
-      }
-    },
-    {
-      "@id": "geo:crs",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "geo:Geometry"
-      }
-    },
-    {
-      "@id": "schema:unitText",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Use schema:unitText only for human-readable unit labels. Add qudt:hasUnit when a controlled unit IRI is known."
-      }
-    },
-    {
-      "@id": "http://schema.org/NewsArticle",
-      "owl:equivalentClass": {
-        "@id": "schema:NewsArticle"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/NewsArticle in Geoconnex exports."
-      }
-    },
-    {
-      "@id": "http://schema.org/Person",
-      "owl:equivalentClass": {
-        "@id": "schema:Person"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/Person in Geoconnex exports."
-      }
-    },
-    {
-      "@id": "hyf:HY_FlowPath",
-      "rdfs:subClassOf": {
-        "@id": "hyf:HY_CatchmentRealization"
-      }
-    },
-    {
-      "@id": "hyf:HY_HydroLocation",
-      "rdfs:subClassOf": {
-        "@id": "geo:Feature"
-      },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Treat hydrolocations as geospatial features. Use GeoSPARQL geometry properties for precise location and HY_Features linear-reference properties for hydrologic network position."
+        "@id": "dcterms:identifier"
       }
     },
     {
@@ -716,9 +209,331 @@
       }
     },
     {
-      "@id": "hyf-app:HY_HydrographicNetwork",
+      "@id": "sf:GeometryCollection",
+      "rdfs:subClassOf": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "schema:Organization",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "hyf:HY_FlowPath",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_CatchmentRealization"
+      }
+    },
+    {
+      "@id": "rdf:type",
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "RDF's built-in type predicate. It is intentionally not redeclared as a Geoconnex object or datatype property; use it directly for class membership."
+      }
+    },
+    {
+      "@id": "owl:TransitiveProperty",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "owl:ObjectProperty"
+      }
+    },
+    {
+      "@id": "schema:GovernmentOrganization",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Organization"
+      }
+    },
+    {
+      "@id": "sf:MultiPolygon",
+      "rdfs:subClassOf": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "http://schema.org/logo",
+      "owl:equivalentProperty": {
+        "@id": "schema:logo"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Normalize to https://schema.org/logo in Geoconnex exports."
+      }
+    },
+    {
+      "@id": "rdf:List",
+      "@type": "owl:Class"
+    },
+    {
+      "@id": "schema:publisher",
+      "@type": "owl:ObjectProperty",
+      "rdfs:subPropertyOf": {
+        "@id": "dcterms:publisher"
+      }
+    },
+    {
+      "@id": "schema:encodingFormat",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
       "skos:closeMatch": {
-        "@id": "hyf:HY_HydrographicNetwork"
+        "@id": "dcat:mediaType"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Schema.org encodingFormat is commonly a text media type or URL. Keep it as a datatype property for Geoconnex exports; add dcat:mediaType separately when using controlled media-type resources."
+      }
+    },
+    {
+      "@id": "rdfs:ContainerMembershipProperty",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "rdf:Property"
+      }
+    },
+    {
+      "@id": "schema:temporalCoverage",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Schema.org temporalCoverage accepts flexible text, dates, and intervals. If the data can be normalized, also add dcterms:temporal with a typed PeriodOfTime node."
+      }
+    },
+    {
+      "@id": "rdfs:Datatype",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "rdfs:Class"
+      }
+    },
+    {
+      "@id": "hyf:HY_WaterBody",
+      "rdfs:subClassOf": [
+        {
+          "@id": "hyf:HY_HydroFeature"
+        },
+        {
+          "@id": "hyfo:SurfaceWaterFeature"
+        }
+      ]
+    },
+    {
+      "@id": "hyf-app:HY_HydrometricFeature",
+      "skos:closeMatch": {
+        "@id": "hyf:HY_HydrometricFeature"
+      }
+    },
+    {
+      "@id": "schema:line",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "schema:GeoShape"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Prefer geo:asWKT for machine spatial reasoning; keep schema:line for Schema.org compatibility."
+      }
+    },
+    {
+      "@id": "qudt:hasQuantityKind",
+      "@type": "owl:ObjectProperty",
+      "rdfs:range": {
+        "@id": "qudt:QuantityKind"
+      }
+    },
+    {
+      "@id": "hyf:upstreamWaterBody",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "hyf:downstreamWaterBody"
+      }
+    },
+    {
+      "@id": "schema:BreadcrumbList",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      }
+    },
+    {
+      "@id": "sf:LineString",
+      "rdfs:subClassOf": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "hyf:HY_Catchment",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_HydroFeature"
+      }
+    },
+    {
+      "@id": "hyf-app:HY_HydrometricNetwork",
+      "skos:closeMatch": {
+        "@id": "hyf:HY_HydrometricNetwork"
+      }
+    },
+    {
+      "@id": "schema:DataDownload",
+      "rdfs:subClassOf": {
+        "@id": "dcat:Distribution"
+      }
+    },
+    {
+      "@id": "schema:elevation",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:decimal"
+      }
+    },
+    {
+      "@id": "hyf:HY_IndirectPosition",
+      "@type": "owl:Class",
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "This is a class-like HY_Features term. Move it from the property inventory to the class inventory if it appears as a property."
+      }
+    },
+    {
+      "@id": "schema:Person",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:WebSite",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "ssn-system:frequency",
+      "@type": "owl:ObjectProperty",
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Use for sampling or operating frequency when the subject is an SSN/SOSA system, sensor, or procedure. Consider pairing with QUDT for numeric value and unit."
+      }
+    },
+    {
+      "@id": "schema:type",
+      "owl:deprecated": true,
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Avoid using schema:type. Use rdf:type in RDF and @type in JSON-LD."
+      }
+    },
+    {
+      "@id": "http://schema.org/WebSite",
+      "owl:equivalentClass": {
+        "@id": "schema:WebSite"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Normalize to https://schema.org/WebSite in Geoconnex exports."
+      }
+    },
+    {
+      "@id": "http://schema.org/Person",
+      "owl:equivalentClass": {
+        "@id": "schema:Person"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Normalize to https://schema.org/Person in Geoconnex exports."
+      }
+    },
+    {
+      "@id": "schema:variableMeasured",
+      "@type": "owl:ObjectProperty",
+      "rdfs:range": {
+        "@id": "geoconnex:MeasuredVariable"
+      }
+    },
+    {
+      "@id": "schema:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:range": {
+        "@id": "rdfs:Literal"
+      },
+      "skos:closeMatch": {
+        "@id": "qudt:numericValue"
+      }
+    },
+    {
+      "@id": "http://schema.org/ListItem",
+      "owl:equivalentClass": {
+        "@id": "schema:ListItem"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Normalize to https://schema.org/ListItem in Geoconnex exports."
+      }
+    },
+    {
+      "@id": "hyf:HY_HydrometricFeature",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_HydroFeature"
+      }
+    },
+    {
+      "@id": "owl:SymmetricProperty",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "owl:ObjectProperty"
+      }
+    },
+    {
+      "@id": "schema:geo",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "schema:Place"
+      },
+      "rdfs:range": {
+        "@id": "_:n0b097c64475c4e90b30e855bd9510381b4"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Use schema:geo directly for Schema.org-facing coordinate or shape summaries. Use geo:hasGeometry or geo:defaultGeometry for formal GeoSPARQL geometries."
+      }
+    },
+    {
+      "@id": "_:n0b097c64475c4e90b30e855bd9510381b4",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "schema:GeoCoordinates"
+          },
+          {
+            "@id": "schema:GeoShape"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "schema:distribution",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "schema:Dataset"
+      },
+      "rdfs:range": {
+        "@id": "schema:DataDownload"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "dcat:distribution"
       }
     },
     {
@@ -736,103 +551,32 @@
       }
     },
     {
-      "@id": "dcterms:conformsTo",
-      "@type": "owl:ObjectProperty",
-      "rdfs:range": {
-        "@id": "dcterms:Standard"
-      }
-    },
-    {
-      "@id": "sf:MultiPolygon",
-      "rdfs:subClassOf": {
-        "@id": "geo:Geometry"
-      }
-    },
-    {
-      "@id": "rdf:List",
-      "@type": "owl:Class"
-    },
-    {
-      "@id": "qudt:hasQuantityKind",
-      "@type": "owl:ObjectProperty",
-      "rdfs:range": {
-        "@id": "qudt:QuantityKind"
-      }
-    },
-    {
-      "@id": "schema:Dataset",
+      "@id": "schema:PropertyValue",
       "skos:closeMatch": {
-        "@id": "dcat:Dataset"
+        "@id": "qudt:QuantityValue"
       },
       "skos:editorialNote": {
         "@language": "en",
-        "@value": "For open-data catalogs, type dataset resources as both schema:Dataset and dcat:Dataset rather than asserting global owl:equivalentClass."
+        "@value": "Use schema:PropertyValue for web markup and QUDT QuantityValue for formal numeric value/unit modeling. Avoid global equivalence because Schema.org PropertyValue is broader."
       }
     },
     {
-      "@id": "schema:provider",
-      "@type": "owl:ObjectProperty",
-      "rdfs:subPropertyOf": {
-        "@id": "prov:wasAttributedTo"
-      }
-    },
-    {
-      "@id": "hyf:HY_HydrometricFeature",
-      "rdfs:subClassOf": {
-        "@id": "hyf:HY_HydroFeature"
-      }
-    },
-    {
-      "@id": "schema:elevation",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:range": {
-        "@id": "xsd:decimal"
-      }
-    },
-    {
-      "@id": "hyf-app:HY_CatchmentDivide",
-      "owl:equivalentClass": {
-        "@id": "hyf:HY_CatchmentDivide"
-      }
-    },
-    {
-      "@id": "schema:Organization",
+      "@id": "rdf:Property",
       "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "schema:Thing"
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "RDF's built-in class of properties. Do not use it as a catch-all declaration for Geoconnex predicates; classify predicates as owl:ObjectProperty, owl:DatatypeProperty, or owl:AnnotationProperty where possible."
       }
     },
     {
-      "@id": "schema:latitude",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": {
-        "@id": "schema:GeoCoordinates"
-      },
-      "rdfs:range": {
-        "@id": "xsd:decimal"
-      }
-    },
-    {
-      "@id": "schema:governmentAgency",
-      "@type": "owl:ObjectProperty",
-      "rdfs:range": {
-        "@id": "schema:GovernmentOrganization"
+      "@id": "schema:GeoCoordinates",
+      "skos:closeMatch": {
+        "@id": "sf:Point"
       },
       "skos:editorialNote": {
         "@language": "en",
-        "@value": "This is a property, not a class. Move it from the class inventory to the property inventory."
+        "@value": "Do not make this equivalent to sf:Point; Schema.org coordinates are a lightweight web metadata shape, while Simple Features points are formal geometries."
       }
-    },
-    {
-      "@id": "hyf:HY_HydrographicNetwork",
-      "@type": "owl:Class",
-      "rdfs:subClassOf": {
-        "@id": "hyf:HY_HydroFeature"
-      }
-    },
-    {
-      "@id": "schema:description",
-      "@type": "owl:AnnotationProperty"
     },
     {
       "@id": "geoconnex:geoconnex-alignment",
@@ -874,21 +618,140 @@
       ]
     },
     {
-      "@id": "http://schema.org/WebPage",
-      "owl:equivalentClass": {
-        "@id": "schema:WebPage"
+      "@id": "hyf:linearElement",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "hyf:HY_IndirectPosition"
       },
-      "skos:editorialNote": {
-        "@language": "en",
-        "@value": "Normalize to https://schema.org/WebPage in Geoconnex exports."
+      "rdfs:range": {
+        "@id": "hyf:HY_FlowPath"
       }
     },
     {
-      "@id": "schema:type",
-      "owl:deprecated": true,
+      "@id": "geo:asWKT",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "geo:Geometry"
+      },
+      "rdfs:range": {
+        "@id": "geo:wktLiteral"
+      }
+    },
+    {
+      "@id": "sf:Point",
+      "rdfs:subClassOf": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "rdfs:Class",
+      "@type": "owl:Class"
+    },
+    {
+      "@id": "geo:crs",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "geoconnex:MeasuredVariable",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "schema:PropertyValue"
+          },
+          {
+            "@id": "sosa:ObservableProperty"
+          },
+          {
+            "@id": "qudt:QuantityKind"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "schema:unitText",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
       "skos:editorialNote": {
         "@language": "en",
-        "@value": "Avoid using schema:type. Use rdf:type in RDF and @type in JSON-LD."
+        "@value": "Use schema:unitText only for human-readable unit labels. Add qudt:hasUnit when a controlled unit IRI is known."
+      }
+    },
+    {
+      "@id": "hyf:HY_CatchmentDivide",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_CatchmentRealization"
+      }
+    },
+    {
+      "@id": "schema:polygon",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "schema:GeoShape"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Prefer geo:asWKT for machine spatial reasoning; keep schema:polygon for Schema.org compatibility."
+      }
+    },
+    {
+      "@id": "hyf:distanceDescription",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "hyf:HY_IndirectPosition"
+      },
+      "rdfs:range": {
+        "@id": "hyf:HY_DistanceDescription"
+      }
+    },
+    {
+      "@id": "dcterms:conformsTo",
+      "@type": "owl:ObjectProperty",
+      "rdfs:range": {
+        "@id": "dcterms:Standard"
+      }
+    },
+    {
+      "@id": "hyf:HY_HydroLocation",
+      "rdfs:subClassOf": {
+        "@id": "geo:Feature"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Treat hydrolocations as geospatial features. Use GeoSPARQL geometry properties for precise location and HY_Features linear-reference properties for hydrologic network position."
+      }
+    },
+    {
+      "@id": "hyf-app:HY_HydrographicNetwork",
+      "skos:closeMatch": {
+        "@id": "hyf:HY_HydrographicNetwork"
+      }
+    },
+    {
+      "@id": "hyf:HY_DistanceFromReferent",
+      "@type": "owl:Class",
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "This is a class-like HY_Features term. Move it from the property inventory to the class inventory if it appears as a property."
+      }
+    },
+    {
+      "@id": "schema:coordinates",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Prefer geo:asWKT or schema:latitude/schema:longitude where possible. schema:coordinates is useful as a lightweight fallback."
       }
     },
     {
@@ -896,6 +759,143 @@
       "@type": "owl:Class",
       "rdfs:subClassOf": {
         "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "schema:SearchAction",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Action"
+      }
+    },
+    {
+      "@id": "schema:Dataset",
+      "skos:closeMatch": {
+        "@id": "dcat:Dataset"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "For open-data catalogs, type dataset resources as both schema:Dataset and dcat:Dataset rather than asserting global owl:equivalentClass."
+      }
+    },
+    {
+      "@id": "hyf:distanceExpression",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "hyf:HY_DistanceDescription"
+      },
+      "rdfs:range": {
+        "@id": "hyf:HY_DistanceFromReferent"
+      }
+    },
+    {
+      "@id": "http://schema.org/Organization",
+      "owl:equivalentClass": {
+        "@id": "schema:Organization"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Normalize to https://schema.org/Organization in Geoconnex exports."
+      }
+    },
+    {
+      "@id": "schema:provider",
+      "@type": "owl:ObjectProperty",
+      "rdfs:subPropertyOf": {
+        "@id": "prov:wasAttributedTo"
+      }
+    },
+    {
+      "@id": "schema:Place",
+      "rdfs:subClassOf": {
+        "@id": "geo:Feature"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Use schema:Place for web discovery and GeoSPARQL geo:Feature/geo:Geometry for formal spatial reasoning."
+      }
+    },
+    {
+      "@id": "hyf:interpolative",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "hyf:HY_IndirectPosition"
+      },
+      "rdfs:range": {
+        "@id": "xsd:boolean"
+      }
+    },
+    {
+      "@id": "hyf:HY_HydrometricNetwork",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_HydrographicNetwork"
+      }
+    },
+    {
+      "@id": "http://schema.org/NewsArticle",
+      "owl:equivalentClass": {
+        "@id": "schema:NewsArticle"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Normalize to https://schema.org/NewsArticle in Geoconnex exports."
+      }
+    },
+    {
+      "@id": "schema:name",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "http://schema.org/BreadcrumbList",
+      "owl:equivalentClass": {
+        "@id": "schema:BreadcrumbList"
+      },
+      "skos:editorialNote": {
+        "@language": "en",
+        "@value": "Normalize to https://schema.org/BreadcrumbList in Geoconnex exports."
+      }
+    },
+    {
+      "@id": "hyf-app:HY_CatchmentDivide",
+      "owl:equivalentClass": {
+        "@id": "hyf:HY_CatchmentDivide"
+      }
+    },
+    {
+      "@id": "schema:measurementTechnique",
+      "@type": "owl:ObjectProperty",
+      "rdfs:subPropertyOf": {
+        "@id": "sosa:usedProcedure"
+      }
+    },
+    {
+      "@id": "schema:GeoShape",
+      "skos:closeMatch": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "schema:NewsArticle",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Article"
+      }
+    },
+    {
+      "@id": "schema:measurementMethod",
+      "@type": "owl:ObjectProperty",
+      "rdfs:subPropertyOf": {
+        "@id": "sosa:usedProcedure"
+      }
+    },
+    {
+      "@id": "schema:latitude",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "schema:GeoCoordinates"
+      },
+      "rdfs:range": {
+        "@id": "xsd:decimal"
       }
     }
   ]

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b6">
+    <rdf:first rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_FlowPath"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:FlowPath</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any non-atomic/non-elementary kind of HY_FlowPath comprised of a contiguous set of atomic/elementary flowpaths</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geo:hasGeometry</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A spatial representation for a given Feature.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/feature-properties"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spatialai/spatial/water-full">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9070-3169"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-04</dcterms:created>
+    <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-5331-5052"/>
+    <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-9070-3169"/>
+    <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-3271-6700"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-01</dcterms:modified>
+    <dcterms:publisher rdf:resource="https://sawgraph.github.io/"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-21</dcterms:issued>
+    <dc:source rdf:resource="https://raw.githubusercontent.com/SAWGraph/water-kg/refs/heads/main/ontologies/sawgraph-water-ontology.ttl"/>
+    <dcterms:description xml:lang="en">This ontology supports querying the SAWGraph Knowledge Graph. It adapts and extends concepts from HY_Features, HyFO, and GWML2</dcterms:description>
+    <dcterms:title xml:lang="en">SAWGraph's hydrology (water) ontology - an adaptation and extension of concepts from HY_Features, HyFO, and GWML2</dcterms:title>
+    <rdfs:label xml:lang="en">SAWGraph's hydrology (water) ontology - an adaptation and extension of concepts from HY_Features, HyFO, and GWML2</rdfs:label>
+    <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/quantityValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qudt:quantityValue</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#SurfaceWaterFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_WaterBody</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A waterbody is part of the hydrographic network and is either standing in a depression or flowing in a channel, which are parts of the channel network</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_Canal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_Canal</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a body of surface water, participating in a hydrographic network, that is special due to its artificial origin (man-made)</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wbd.spatialai.org/v1/wbd#containingHUC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLineCatchment"/>
+    <rdfs:range rdf:resource="http://wbd.spatialai.org/v1/wbd#DrainageBasin"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wbd:containingHUC</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a flowline catchment to any WBD drainage basin it lies within</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geo:Geometry</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_Impoundment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_Impoundment</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a body of surface water, participating in a hydrographic network, seen as being special due to being formed by collecting water, for example in the case of a dam</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geo:SpatialObject</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anything spatial (being or having a shape, position or an extent).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0/req/core/spatial-object-class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#GW_HydrogeoUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:GW_HydrogeoUnit</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any soil or rock unit or zone that by virtue of its hydraulic properties has a distinct influence on the storage or movement of groundwater (after ANS, 1980)</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_River">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_River</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a body of surface water, participating in a hydrographic network, which is special due to its property to permanently or temporarily flow</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/QuantityValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qudt:QuantityValue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentDivide">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentRealization"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_CatchmentDivide</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One-dimensional (linear) feature that is a hydrology-specific realization of the holistic catchment</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#gwMonitoringHost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://gwml2.org/def/gwml2#GW_MonitoringSite"/>
+    <rdfs:range rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:gwMonitoringHost</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the feature hosting the site [GW_MonitoringSite], e.g., a well, spring, lake or stream</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#partOfFlowPath"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onClass rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#MainStem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_FlowPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentRealization"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_FlowPath</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realizes a catchment specifically as a path connecting the inflow and outflow of the catchment it realizes</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#defaultGeometry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geo:defaultGeometry</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamFlowPathTC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamWaterBodyTC"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPath"/>
+    <rdfs:range rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPath"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:downstreamFlowPathTC</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The transitive closure of the nhdplusv2:downstreamFlowPath object property</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#HydroRockBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#SubsurfaceWaterFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:HydroRockBody</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a hybrid physical object, such as aquifer, well, or lake, that consists partly of a rock body (a container), empty spaces therein (voids), and a water body inside the space</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://www.tandfonline.com/doi/pdf/10.1080/13658816.2018.1443751"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPath"/>
+    <rdfs:subClassOf rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b7"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:FlowLine</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any atomic/elementary kind of HY_FlowPath within a given framework/context (for example, a single NHDFlowline instance)</dcterms:description>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">area of associated catchment may be zero (per hydrologic fabric logic model)</dcterms:description>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can be part of at most one mainstem</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#partOfFlowPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdfs:range rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPath"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:partOfFlowPath</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects an elementary flowpath (e.g., NHDFlowline) to any non-elementary flowpath it is a part of</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b12">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_Lagoon"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#associatedCatchmentArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPath"/>
+    <rdfs:range rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentArea"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:associatedCatchmentArea</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the one and only one catchment area that is associated with a particular flowpath</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasReachCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b4"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasReachCode</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an NHDPlusV2 feature to its ReachCode</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#divergence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:divergence</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates if a nhdplusv2:FlowLine is the main-path or a minor-path of a divergence (no triple if no divergence)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b9">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_Canal"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_Lake">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_Lake</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a body of surface water, participating in a hydrographic network, made special due to its considerable size</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b16">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentArea"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPathLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:FlowPathLength</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The length of a flowpath</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamFlowPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamFlowPathTC"/>
+    <rdfs:subPropertyOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/downstreamWaterBody"/>
+    <owl:inverseOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#upstreamFlowPath"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:downstreamFlowPath</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies another flowpath immediately downstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the flowpath</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/realizedCatchment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentRealization"/>
+    <rdfs:range rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_Catchment"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:realizedCatchment</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the one and only one catchment that is realized by a particular feature</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#gwAquiferSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://gwml2.org/def/gwml2#GW_Aquifer"/>
+    <rdfs:range rdf:resource="http://gwml2.org/def/gwml2#GW_AquiferSystem"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:gwAquiferSystem</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an aquifer system part, which can be another system, aquifer or confining bed, with its aquifer system</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/downstreamWaterBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamWaterBodyTC"/>
+    <owl:inverseOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/upstreamWaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:downstreamWaterBody</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies another waterbody immediately downstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the waterbody</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#gwAquiferSystemPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://gwml2.org/def/gwml2#gwAquiferSystem"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:gwAquiferSystemPart</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an aquifer system with its parts, which can be other systems, aquifers or confining beds</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamWaterBodyTC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b1"/>
+    <rdfs:range rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b1"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:downstreamWaterBodyTC</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The transitive closure of the nhdplusv2:downstreamWaterBody object property</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b22">
+    <rdf:first rdf:resource="http://hyfo.spatialai.org/v1/hyfo#AquiferWaterFeature"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#GW_AquiferSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gwml2.org/def/gwml2#GW_AquiferUnit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:GW_AquiferSystem</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A body of permeable and poorly permeable material that functions regionally as a water-yielding unit; it comprises two or more permeable beds separated at least locally by confining beds that impede groundwater movement but do not greatly affect the regional hydraulic continuity of the system; includes both saturated and unsaturated parts of permeable material (after ASCE, 1987)</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    <owl:disjointWith rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geo:Feature</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A discrete spatial phenomenon in a universe of discourse.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0/req/core/feature-class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#GW_AquiferUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gwml2.org/def/gwml2#GW_HydrogeoUnit"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#AquiferWaterFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:GW_AquiferUnit</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Denotes aquifer-related hydrogeological units: aquifer systems, aquifers, or confining beds</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wbd.spatialai.org/v1/wbd#primaryFlowPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://wbd.spatialai.org/v1/wbd#DrainageBasin"/>
+    <rdfs:range rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#MainStem"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wbd:primaryFlowPath</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a drainage basin (area) to the primary mainstem flowing through it</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b11">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_Impoundment"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b10">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_Estuary"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b14">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_River"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#upstreamFlowPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/upstreamWaterBody"/>
+    <owl:inverseOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamFlowPath"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:upstreamFlowPath</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies another flowpath immediately upstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the flowpath</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/upstreamWaterBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/downstreamWaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:upstreamWaterBody</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies another waterbody immediately upstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the waterbody</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_DendriticCatchment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_Catchment"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_DendriticCatchment</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a catchment which is determined by a single common downstream catchment</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b23">
+    <rdf:first rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterWell"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spatialai/spatial/spatial-full#connectedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spatialai/spatial/spatial-full#spatiallyRelatedTo"/>
+    <rdfs:label>topological connection (spatial contact) (sawgraph)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLineCatchment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_DendriticCatchment"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:FlowLineCatchment</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The catchment polygon for a nhdplusv2:FlowLine</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b28">
+    <rdf:first rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeature"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#AquiferWaterFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#SubsurfaceWaterFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:AquiferWaterFeature</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aquifer water feature including water, container, and void</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasFlowPathLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasFlowPathLength</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates any flowpath to its length, represented as, for example, a qudt:Quantity object</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#SurfaceWaterFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:SurfaceWaterFeature</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A complete surface water feature including water, container, and void (for example: lake, river, marsh, et al.)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#WaterFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:WaterFeature</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A complete water feature including water, container, and void; includes surface and subsurface water features</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#GW_Aquifer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gwml2.org/def/gwml2#GW_AquiferUnit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:GW_Aquifer</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A body of earth material that contains / potentially contains / potentially contained sufficient saturated permeable material to yield significant quantities of water to wells and springs (after Lohman, 1972)</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#partOfMainStem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#partOfFlowPath"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdfs:range rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#MainStem"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:partOfMainStem</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects an elementary flowpath (e.g., NHDFlowline) to its main stem</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#gwWellUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://hyfo.spatialai.org/v1/hyfo#tapsAquifer"/>
+    <rdfs:domain rdf:resource="http://gwml2.org/def/gwml2#GW_Well"/>
+    <rdfs:range rdf:resource="http://gwml2.org/def/gwml2#GW_AquiferUnit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:gwWellUnit</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the aquifers or confining beds intersecting the well</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wbd.spatialai.org/v1/wbd#DrainageBasin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_DendriticCatchment"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wbd:DrainageBasin</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A HUC12 watershed (drainage area) from the WBD</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_HydroFeature</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a basic feature to reflect the properties that all hydrologic features have</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wbd.spatialai.org/v1/wbd#contributingDrainageBasin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://wbd.spatialai.org/v1/wbd#primaryFlowPath"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#MainStem"/>
+    <rdfs:range rdf:resource="http://wbd.spatialai.org/v1/wbd#DrainageBasin"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wbd:contributingDrainageBasin</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a mainstem to the drainage basin (area) it drains</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentRealization"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_CatchmentArea</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two-dimensional (areal) hydrology-specific realization of the holistic catchment</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/Quantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qudt:Quantity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b2">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasFTYPE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b4"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasFTYPE</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an NHDPlusV2 feature to its FTYPE (see also nhdplusv2:hasFCODE)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasLevelPathId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasLevelPathId</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The level path id of a flowline is the hydrologic sequence number of the most downstream flowline feature in the level path and is used to connect flowlines to their corresponding main stem</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b19">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentRealization"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b26">
+    <rdf:first rdf:resource="http://hyfo.spatialai.org/v1/hyfo#SurfaceWaterFeature"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasCOMID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b4"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasCOMID</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an NHDPlusV2 feature to its COMID</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qudt:Unit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasSlope">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasSlope</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The numeric average slope of a flowline</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasMainStemId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#MainStem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasMainStemId</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a nhdplusv2:MainStem feature to its unique identifier</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b20">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#hasFCODE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b4"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:hasFCODE</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an NHDPlusV2 feature to its FCODE (see also nhdplusv2:hasFTYPE)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_Lagoon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_Lagoon</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a body of surface water, participating in a hydrographic network, which is special due to its shallow depth and interaction with the open sea</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/hasQuantityKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qudt:hasQuantityKind</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#partOfWaterBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdfs:range rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:partOfWaterBody</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects an elementary flowpath to a waterbody it lies within</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#MainStem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowPath"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:MainStem</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a named river or similar feature, represented from head to outlet (a composition of elemenatry flowpaths (flowlines) per hydrologic fabric logic model)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/numericValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentRealization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeatureRepresentation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_CatchmentRealization</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">based on the idea that there are multiple hydrology-specific perspectives of the holistic catchment concept that are used to describe a catchment as a unit of study shared across sub-domains and studies</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b25">
+    <rdf:first rdf:resource="http://hyfo.spatialai.org/v1/hyfo#SubsurfaceWaterFeature"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#WaterWell">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#SubsurfaceWaterFeature"/>
+    <owl:equivalentClass rdf:resource="http://gwml2.org/def/gwml2#GW_Well"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:WaterWell</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A water well, with focus on the hole/shaft itself (see gwml2:GW_Well)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#WaterFeatureRepresentation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:WaterFeatureRepresentation</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A representation of a water feature (for example, a line or polygon)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#GW_Well">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#SubsurfaceWaterFeature"/>
+    <owl:equivalentClass rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterWell"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:GW_Well</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shaft or hole sunk, dug or drilled into the Earth to observe, extract or inject water (after IGH1397)</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#SubsurfaceWaterFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:SubsurfaceWaterFeature</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A complete subsurface water feature including water, container, and void (for example, aquifer, well, et al.)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_Catchment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_Catchment</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">captures the union of catchment and hydro nexus, and the multiple realizations of the holistic catchment concept</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/QuantityKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qudt:QuantityKind</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#example">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#isRepresentedByWFR">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeature"/>
+    <rdfs:range rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeatureRepresentation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:isRepresentedByWFR</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a water feature to a representation of that water feature</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nhdplusv2.spatialai.org/v1/nhdplusv2#containsFlowLine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLineCatchment"/>
+    <rdfs:range rdf:resource="http://nhdplusv2.spatialai.org/v1/nhdplusv2#FlowLine"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nhdplusv2:containsFlowLine</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects a flowline catchment with its flowline(s)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spatialai/spatial/spatial-full#spatiallyRelatedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>topological connection (spatial contact) (sawgraph)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b3">
+    <rdf:first rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeatureRepresentation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyfo.spatialai.org/v1/hyfo#tapsAquifer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyfo:tapsAquifer</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the aquifer a well taps</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gwml2.org/def/gwml2#GW_MonitoringSite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwml2:GW_MonitoringSite</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site of observation related to groundwater</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/19-013/19-013.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opengis.net/def/schema/hy_features/hyf/HY_Estuary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyf:HY_Estuary</rdfs:label>
+    <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a body of surface water, participating in a hydrographic network, made special due to branching and its interaction with the open sea</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="https://docs.ogc.org/is/14-111r6/14-111r6.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/opengeospatial/HY_Features/tree/master/ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b17">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_CatchmentDivide"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b13">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_Lake"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b5">
+    <rdf:first rdf:resource="https://www.opengis.net/def/schema/hy_features/hyf/HY_WaterBody"/>
+    <rdf:rest rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf42a55b13ac342ccb8d45761aa64ddc7b29">
+    <rdf:first rdf:resource="http://hyfo.spatialai.org/v1/hyfo#WaterFeatureRepresentation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/hasUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qudt:hasUnit</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/schema/qudt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#note">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
