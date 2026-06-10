@@ -23,11 +23,11 @@ jobs:
         uses: vliz-be-opsci/pylode-to-pages@v0
         with:
           baseuri: https://w3id.com/sal/internetofwater/ontologies.geoconnex.us
-          outfolder: /tmp/pylode-pages
+          outfolder: ./tmp/pylode-pages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         # if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /tmp/pylode-pages
+          publish_dir: ./tmp/pylode-pages
