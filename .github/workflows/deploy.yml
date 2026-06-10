@@ -1,21 +1,30 @@
-
 name: PyLODE to GitHub Pages
+
 on:
   push:
-  workflow_dispatch:  # Allow manual triggering of the workflow
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  OUTPUT_DIR: ./data
 
 jobs:
-  pylode-to-pages:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
@@ -23,43 +32,53 @@ jobs:
         uses: vliz-be-opsci/pylode-to-pages@v0
         with:
           baseuri: https://w3id.org/sal/${{ github.repository_owner }}/${{ github.event.repository.name }}
-          outfolder: ./data
+          outfolder: ${{ env.OUTPUT_DIR }}
 
-      - name: Convert TTL to JSON-LD
+      - name: Convert TTL to JSON-LD and XML
         run: |
           pip install rdflib
           sudo chmod 777 ./data
           python <<'EOF'
           from pathlib import Path
           from rdflib import Graph
-          
-          THISDIR = Path(".") / 'data'
-          THISDIR.mkdir(parents=True, exist_ok=True)
 
-          for ttl in THISDIR.rglob("*.ttl"):
+          outdir = Path("${{ env.OUTPUT_DIR }}")
+          outdir.mkdir(parents=True, exist_ok=True)
+
+          for ttl in outdir.rglob("*.ttl"):
               g = Graph()
               g.parse(ttl, format="turtle")
 
               jsonld = ttl.with_suffix(".jsonld")
               g.serialize(
-                  destination=THISDIR.absolute() / jsonld.name ,
+                  destination=outdir / jsonld.name,
                   format="json-ld",
                   indent=2,
                   auto_compact=True
               )
+
               xml = ttl.with_suffix(".xml")
               g.serialize(
-                  destination=THISDIR.absolute() / xml.name ,
+                  destination=outdir / xml.name,
                   format="xml",
                   indent=2
-
               )
-
           EOF
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ always() }}
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./data
+          path: ${{ env.OUTPUT_DIR }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
