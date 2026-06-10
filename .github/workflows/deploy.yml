@@ -42,14 +42,14 @@ jobs:
 
               jsonld = ttl.with_suffix(".jsonld")
               g.serialize(
-                  destination=THISDIR.absolute() / 'data' / jsonld.name ,
+                  destination=THISDIR.absolute() / jsonld.name ,
                   format="json-ld",
                   indent=2,
                   auto_compact=True
               )
               xml = ttl.with_suffix(".xml")
               g.serialize(
-                  destination=THISDIR.absolute() / 'data' / xml.name ,
+                  destination=THISDIR.absolute() / xml.name ,
                   format="xml",
                   indent=2
 
