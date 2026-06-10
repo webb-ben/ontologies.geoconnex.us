@@ -1,0 +1,32 @@
+
+name: PyLODE to GitHub Pages
+on:
+  push:
+    branches:
+      - main  # Set a branch name to trigger deployment
+  workflow_dispatch:  # Allow manual triggering of the workflow
+
+jobs:
+  pylode-to-pages:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.12'
+
+      - name: Build Pages
+        uses: vliz-be-opsci/pylode-to-pages@v0
+        with:
+          baseuri: https://w3id.com/sal/internetofwater/ontologies.geoconnex.us
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
