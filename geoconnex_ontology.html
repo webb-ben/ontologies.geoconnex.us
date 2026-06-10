@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geoconnex alignment recommendations</title>
+    <link href="pylode.css" rel="stylesheet" type="text/css">
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <script id="schema.org" type="application/ld+json">
+[
+  {
+    "@id": "https://geoconnex.us/def/geoconnex-alignment",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/dateCreated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-06-02"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@language": "en",
+        "@value": "Recommended RDFS/OWL alignment axioms for an incomplete inventory of Geoconnex graph classes and properties. The ontology aligns hydrologic features with SawGraph/HY_Features, spatial descriptions with GeoSPARQL and Simple Features, web discovery metadata with Schema.org and DCAT, and observations/quantities with SOSA/SSN and QUDT."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@language": "en",
+        "@value": "Geoconnex alignment recommendations"
+      }
+    ]
+  }
+]
+	</script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section" id="metadata">
+        <h1>Geoconnex alignment recommendations</h1>
+        <h2>Metadata</h2>
+        <dl>
+          <div>
+            <dt>
+              <strong>IRI</strong>
+            </dt>
+            <dd>
+              <code>https://geoconnex.us/def/geoconnex-alignment</code>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/title" title="A name given to the resource. Defined in DCMI Metadata Terms">Title</a>
+            </dt>
+            <dd><p>Geoconnex alignment recommendations</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/created" title="Date of creation of the resource. Defined in DCMI Metadata Terms">Date Created</a>
+            </dt>
+            <dd><p>2026-06-02</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+            </dt>
+            <dd><p>Recommended RDFS/OWL alignment axioms for an incomplete inventory of Geoconnex graph classes and properties. The ontology aligns hydrologic features with SawGraph/HY_Features, spatial descriptions with GeoSPARQL and Simple Features, web discovery metadata with Schema.org and DCAT, and observations/quantities with SOSA/SSN and QUDT.</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://www.w3.org/2002/07/owl#imports" title="The property that is used for importing other ontologies into a given ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Imports</a>
+            </dt>
+            <dd>
+              <a href="http://purl.org/spatialai/spatial/water-full">http://purl.org/spatialai/spatial/water-full</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <div class="section" id="classes">
+        <h2>Classes</h2>
+        <h3 id="class-hierarchy">Class Hierarchy</h3>
+        <div class="hierarchy">
+          <ul class="hierarchy">
+            <li>
+              <a href="#List">None</a>
+            </li>
+            <li>
+              <a href="#Property">None</a>
+              <ul class="hierarchy">
+                <li>
+                  <a href="#ContainerMembershipProperty">None</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#Class">None</a>
+              <ul class="hierarchy">
+                <li>
+                  <a href="#Datatype">None</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#SymmetricProperty">None</a>
+            </li>
+            <li>
+              <a href="#TransitiveProperty">None</a>
+            </li>
+            <li>
+              <a href="#MeasuredVariable">None</a>
+            </li>
+            <li>
+              <a href="#BreadcrumbList">None</a>
+            </li>
+            <li>
+              <a href="#EntryPoint">None</a>
+            </li>
+            <li>
+              <a href="#ImageObject">None</a>
+            </li>
+            <li>
+              <a href="#ListItem">None</a>
+            </li>
+            <li>
+              <a href="#NewsArticle">None</a>
+            </li>
+            <li>
+              <a href="#Organization">None</a>
+              <ul class="hierarchy">
+                <li>
+                  <a href="#GovernmentOrganization">None</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#Person">None</a>
+            </li>
+            <li>
+              <a href="#SearchAction">None</a>
+            </li>
+            <li>
+              <a href="#WebPage">None</a>
+            </li>
+            <li>
+              <a href="#WebSite">None</a>
+            </li>
+            <li>
+              <a href="#HY_DistanceDescription">None</a>
+            </li>
+            <li>
+              <a href="#HY_DistanceFromReferent">None</a>
+            </li>
+            <li>
+              <a href="#HY_HydrographicNetwork">None</a>
+            </li>
+            <li>
+              <a href="#HY_IndirectPosition">None</a>
+            </li>
+          </ul>
+        </div>
+        <h3 id="class-definitions">Class Definitions</h3>
+        <div class="property entity" id="GovernmentOrganization">
+          <h3>Government Organization
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/GovernmentOrganization</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://schema.org/Organization">schema:Organization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://schema.org/governmentAgency">schema:governmentAgency</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Organization">
+          <h3>Organization
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/Organization</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Thing">schema:Thing</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://schema.org/GovernmentOrganization">schema:GovernmentOrganization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Person">
+          <h3>Person
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/Person</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Thing">schema:Thing</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SearchAction">
+          <h3>Search Action
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/SearchAction</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Action">schema:Action</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="EntryPoint">
+          <h3>Entry Point
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/EntryPoint</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Intangible">schema:Intangible</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ImageObject">
+          <h3>Image Object
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/ImageObject</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/MediaObject">schema:MediaObject</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="BreadcrumbList">
+          <h3>Breadcrumb List
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/BreadcrumbList</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/ItemList">schema:ItemList</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ListItem">
+          <h3>List Item
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/ListItem</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Intangible">schema:Intangible</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="WebSite">
+          <h3>Web Site
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/WebSite</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="WebPage">
+          <h3>Web Page
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/WebPage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="NewsArticle">
+          <h3>News Article
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/NewsArticle</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Article">schema:Article</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Property">
+          <h3>Property
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty">ContainerMembershipProperty</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Datatype">
+          <h3>Datatype
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/2000/01/rdf-schema#Datatype</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Class">
+          <h3>Class
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/2000/01/rdf-schema#Class</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ContainerMembershipProperty">
+          <h3>Container Membership Property
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="List">
+          <h3>List
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#List</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="TransitiveProperty">
+          <h3>Transitive Property
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/2002/07/owl#TransitiveProperty</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2002/07/owl#ObjectProperty">ObjectProperty</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SymmetricProperty">
+          <h3>Symmetric Property
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/2002/07/owl#SymmetricProperty</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2002/07/owl#ObjectProperty">ObjectProperty</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="HY_HydrographicNetwork">
+          <h3>Hy_Hydrographic Network
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/HY_HydrographicNetwork</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature">hyf:HY_HydroFeature</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydrometricNetwork">hyf:HY_HydrometricNetwork</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="MeasuredVariable">
+          <h3>Measured Variable
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://geoconnex.us/def/MeasuredVariable</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://schema.org/variableMeasured">variableMeasured</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="HY_IndirectPosition">
+          <h3>Hy_Indirect Position
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/HY_IndirectPosition</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul class="pylodelitlist">
+                  <li>
+                    <span>
+                      <a href="https://www.opengis.net/def/schema/hy_features/hyf/interpolative">hyf:interpolative</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://www.opengis.net/def/schema/hy_features/hyf/linearElement">hyf:linearElement</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://www.opengis.net/def/schema/hy_features/hyf/distanceDescription">hyf:distanceDescription</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="HY_DistanceFromReferent">
+          <h3>Hy_Distance From Referent
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/HY_DistanceFromReferent</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/distanceExpression">hyf:distanceExpression</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="HY_DistanceDescription">
+          <h3>Hy_Distance Description
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/HY_DistanceDescription</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/distanceExpression">hyf:distanceExpression</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/distanceDescription">hyf:distanceDescription</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="objectproperties">
+        <h2>Object Properties</h2>
+        <h3 id="object-property-hierarchy">Object Property Hierarchy</h3>
+        <div class="hierarchy">
+          <ul class="hierarchy">
+            <li>
+              <a href="#conformsTo">None</a>
+            </li>
+            <li>
+              <a href="#hasQuantityKind">None</a>
+            </li>
+            <li>
+              <a href="#hasUnit">None</a>
+            </li>
+            <li>
+              <a href="#crs">None</a>
+            </li>
+            <li>
+              <a href="#frequency">None</a>
+            </li>
+            <li>
+              <a href="#contentUrl">None</a>
+            </li>
+            <li>
+              <a href="#distribution">None</a>
+            </li>
+            <li>
+              <a href="#geo">None</a>
+            </li>
+            <li>
+              <a href="#governmentAgency">None</a>
+            </li>
+            <li>
+              <a href="#logo">None</a>
+            </li>
+            <li>
+              <a href="#measurementMethod">None</a>
+            </li>
+            <li>
+              <a href="#measurementTechnique">None</a>
+            </li>
+            <li>
+              <a href="#provider">None</a>
+            </li>
+            <li>
+              <a href="#publisher">None</a>
+            </li>
+            <li>
+              <a href="#url">None</a>
+            </li>
+            <li>
+              <a href="#variableMeasured">None</a>
+            </li>
+            <li>
+              <a href="#distanceDescription">None</a>
+            </li>
+            <li>
+              <a href="#distanceExpression">None</a>
+            </li>
+            <li>
+              <a href="#downstreamWaterBody">None</a>
+            </li>
+            <li>
+              <a href="#linearElement">None</a>
+            </li>
+            <li>
+              <a href="#upstreamWaterBody">None</a>
+            </li>
+          </ul>
+        </div>
+        <h3 id="object-property-definitions">Object Property Definitions</h3>
+        <div class="property entity" id="logo">
+          <h3>logo
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/logo</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://schema.org/ImageObject">schema:ImageObject</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="governmentAgency">
+          <h3>government agency
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/governmentAgency</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://schema.org/GovernmentOrganization">schema:GovernmentOrganization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="downstreamWaterBody">
+          <h3>downstream water body
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/downstreamWaterBody</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://nhdplusv2.spatialai.org/v1/nhdplusv2#downstreamWaterBodyTC">nhdplusv2:downstreamWaterBodyTC</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="upstreamWaterBody">
+          <h3>upstream water body
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/upstreamWaterBody</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="crs">
+          <h3>crs
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.opengis.net/ont/geosparql#crs</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="geo">
+          <h3>geo
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/geo</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Place">schema:Place</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://schema.org/GeoCoordinates">schema:GeoCoordinates</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/GeoShape">schema:GeoShape</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="distribution">
+          <h3>distribution
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/distribution</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="https://schema.org/Dataset">schema:Dataset</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="https://schema.org/DataDownload">schema:DataDownload</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="contentUrl">
+          <h3>content url
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/contentUrl</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/ns/dcat#downloadURL">dcat:downloadURL</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="publisher">
+          <h3>publisher
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/publisher</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://purl.org/dc/terms/publisher">Publisher</a>
+                  <sup class="sup-p" title="RDF Property">p</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="provider">
+          <h3>provider
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/provider</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/ns/prov#wasAttributedTo">was attributed to</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="url">
+          <h3>url
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/url</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="conformsTo">
+          <h3>conforms to
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/conformsTo</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://purl.org/dc/terms/Standard">Standard</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="variableMeasured">
+          <h3>variable measured
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/variableMeasured</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://geoconnex.us/def/MeasuredVariable">geoconnex:MeasuredVariable</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="measurementTechnique">
+          <h3>measurement technique
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/measurementTechnique</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="measurementMethod">
+          <h3>measurement method
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/measurementMethod</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasUnit">
+          <h3>has unit
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://qudt.org/schema/qudt/hasUnit</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasQuantityKind">
+          <h3>has quantity kind
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://qudt.org/schema/qudt/hasQuantityKind</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="frequency">
+          <h3>frequency
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/ns/ssn/systems/frequency</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="linearElement">
+          <h3>linear element
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/linearElement</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_IndirectPosition">hyf:HY_IndirectPosition</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_FlowPath">hyf:HY_FlowPath</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="distanceDescription">
+          <h3>distance description
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/distanceDescription</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_IndirectPosition">hyf:HY_IndirectPosition</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_DistanceDescription">hyf:HY_DistanceDescription</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="distanceExpression">
+          <h3>distance expression
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/distanceExpression</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_DistanceDescription">hyf:HY_DistanceDescription</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_DistanceFromReferent">hyf:HY_DistanceFromReferent</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="datatypeproperties">
+        <h2>Datatype Properties</h2>
+        <div class="property entity" id="asWKT">
+          <h3>as wkt
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.opengis.net/ont/geosparql#asWKT</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.opengis.net/ont/geosparql#wktLiteral">geo:wktLiteral</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="latitude">
+          <h3>latitude
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/latitude</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="https://schema.org/GeoCoordinates">schema:GeoCoordinates</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="longitude">
+          <h3>longitude
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/longitude</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="https://schema.org/GeoCoordinates">schema:GeoCoordinates</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="elevation">
+          <h3>elevation
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/elevation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="polygon">
+          <h3>polygon
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/polygon</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="https://schema.org/GeoShape">schema:GeoShape</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="line">
+          <h3>line
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/line</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <a href="https://schema.org/GeoShape">schema:GeoShape</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="coordinates">
+          <h3>coordinates
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/coordinates</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="encodingFormat">
+          <h3>encoding format
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/encodingFormat</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="temporalCoverage">
+          <h3>temporal coverage
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/temporalCoverage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="value">
+          <h3>value
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/value</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="unitCode">
+          <h3>unit code
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/unitCode</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="unitText">
+          <h3>unit text
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/unitText</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="propertyID">
+          <h3>property id
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/propertyID</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://purl.org/dc/terms/identifier">Identifier</a>
+                  <sup class="sup-p" title="RDF Property">p</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="interpolative">
+          <h3>interpolative
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.opengis.net/def/schema/hy_features/hyf/interpolative</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.opengis.net/def/schema/hy_features/hyf/HY_IndirectPosition">hyf:HY_IndirectPosition</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="annotationproperties">
+        <h2>Annotation Properties</h2>
+        <div class="property entity" id="name">
+          <h3>name
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/name</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="description">
+          <h3>description
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/description</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcat">dcat</dt>
+          <dd>
+            <code>http://www.w3.org/ns/dcat#</code>
+          </dd>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="geo">geo</dt>
+          <dd>
+            <code>http://www.opengis.net/ont/geosparql#</code>
+          </dd>
+          <dt id="geoconnex">geoconnex</dt>
+          <dd>
+            <code>https://geoconnex.us/def/</code>
+          </dd>
+          <dt id="hyf">hyf</dt>
+          <dd>
+            <code>https://www.opengis.net/def/schema/hy_features/hyf/</code>
+          </dd>
+          <dt id="hyf-app">hyf-app</dt>
+          <dd>
+            <code>https://www.opengis.net/def/appschema/hy_features/hyf/</code>
+          </dd>
+          <dt id="hyfo">hyfo</dt>
+          <dd>
+            <code>http://hyfo.spatialai.org/v1/hyfo#</code>
+          </dd>
+          <dt id="nhdplusv2">nhdplusv2</dt>
+          <dd>
+            <code>http://nhdplusv2.spatialai.org/v1/nhdplusv2#</code>
+          </dd>
+          <dt id="owl">owl</dt>
+          <dd>
+            <code>http://www.w3.org/2002/07/owl#</code>
+          </dd>
+          <dt id="prov">prov</dt>
+          <dd>
+            <code>http://www.w3.org/ns/prov#</code>
+          </dd>
+          <dt id="qudt">qudt</dt>
+          <dd>
+            <code>http://qudt.org/schema/qudt/</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+          <dt id="schema">schema</dt>
+          <dd>
+            <code>https://schema.org/</code>
+          </dd>
+          <dt id="sf">sf</dt>
+          <dd>
+            <code>http://www.opengis.net/ont/sf#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+          <dt id="sosa">sosa</dt>
+          <dd>
+            <code>http://www.w3.org/ns/sosa/</code>
+          </dd>
+          <dt id="ssn-system">ssn-system</dt>
+          <dd>
+            <code>http://www.w3.org/ns/ssn/systems/</code>
+          </dd>
+          <dt id="xsd">xsd</dt>
+          <dd>
+            <code>http://www.w3.org/2001/XMLSchema#</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr>
+            <td>
+              <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+            </td>
+            <td>Classes</td>
+          </tr>
+          <tr>
+            <td>
+              <sup class="sup-op" title="OWL Object Property">op</sup>
+            </td>
+            <td>Object Properties</td>
+          </tr>
+          <tr>
+            <td>
+              <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+            </td>
+            <td>Datatype Properties</td>
+          </tr>
+          <tr>
+            <td>
+              <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+            </td>
+            <td>Annotation Properties</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>made by 
+        <a href="https://github.com/rdflib/pyLODE">
+          <span id="p">p</span>
+          <span id="y">y</span>
+          <span>LODE</span>
+        </a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.5.0" id="version">3.5.0</a>
+        <span> with the </span>
+        <a href="https://linked.data.gov.au/def/ontpub" id="profile">OntPub</a>
+        <span>profile</span>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#metadata">Metadata</a>
+          </h4>
+        </li>
+        <li>
+          <h4>
+            <a href="#classes">Classes</a>
+          </h4>
+          <h5>
+            <a href="#class-hierarchy" style="margin-left:10px;">Class Hierarchy</a>
+          </h5>
+          <h5>
+            <a href="#class-definitions" style="margin-left:10px;">Class Definitions</a>
+          </h5>
+          <ul class="second">
+            <li style="margin-left:10px;">
+              <a href="#GovernmentOrganization">Government Organization</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#Organization">Organization</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#Person">Person</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#SearchAction">Search Action</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#EntryPoint">Entry Point</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#ImageObject">Image Object</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#BreadcrumbList">Breadcrumb List</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#ListItem">List Item</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#WebSite">Web Site</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#WebPage">Web Page</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#NewsArticle">News Article</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#Property">Property</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#Datatype">Datatype</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#Class">Class</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#ContainerMembershipProperty">Container Membership Property</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#List">List</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#TransitiveProperty">Transitive Property</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#SymmetricProperty">Symmetric Property</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#HY_HydrographicNetwork">Hy_Hydrographic Network</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#MeasuredVariable">Measured Variable</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#HY_IndirectPosition">Hy_Indirect Position</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#HY_DistanceFromReferent">Hy_Distance From Referent</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#HY_DistanceDescription">Hy_Distance Description</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#objectproperties">Object Properties</a>
+          </h4>
+          <h5>
+            <a href="#object-property-hierarchy" style="margin-left:10px;">Object Property Hierarchy</a>
+          </h5>
+          <h5>
+            <a href="#object-property-definitions" style="margin-left:10px;">Object Property Definitions</a>
+          </h5>
+          <ul class="second">
+            <li style="margin-left:10px;">
+              <a href="#logo">logo</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#governmentAgency">government agency</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#downstreamWaterBody">downstream water body</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#upstreamWaterBody">upstream water body</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#crs">crs</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#geo">geo</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#distribution">distribution</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#contentUrl">content url</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#publisher">publisher</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#provider">provider</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#url">url</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#conformsTo">conforms to</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#variableMeasured">variable measured</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#measurementTechnique">measurement technique</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#measurementMethod">measurement method</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#hasUnit">has unit</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#hasQuantityKind">has quantity kind</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#frequency">frequency</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#linearElement">linear element</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#distanceDescription">distance description</a>
+            </li>
+            <li style="margin-left:10px;">
+              <a href="#distanceExpression">distance expression</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#datatypeproperties">Datatype Properties</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#asWKT">as wkt</a>
+            </li>
+            <li>
+              <a href="#latitude">latitude</a>
+            </li>
+            <li>
+              <a href="#longitude">longitude</a>
+            </li>
+            <li>
+              <a href="#elevation">elevation</a>
+            </li>
+            <li>
+              <a href="#polygon">polygon</a>
+            </li>
+            <li>
+              <a href="#line">line</a>
+            </li>
+            <li>
+              <a href="#coordinates">coordinates</a>
+            </li>
+            <li>
+              <a href="#encodingFormat">encoding format</a>
+            </li>
+            <li>
+              <a href="#temporalCoverage">temporal coverage</a>
+            </li>
+            <li>
+              <a href="#value">value</a>
+            </li>
+            <li>
+              <a href="#unitCode">unit code</a>
+            </li>
+            <li>
+              <a href="#unitText">unit text</a>
+            </li>
+            <li>
+              <a href="#propertyID">property id</a>
+            </li>
+            <li>
+              <a href="#interpolative">interpolative</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#annotationproperties">Annotation Properties</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#name">name</a>
+            </li>
+            <li>
+              <a href="#description">description</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcat">dcat</a>
+            </li>
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#geo">geo</a>
+            </li>
+            <li>
+              <a href="#geoconnex">geoconnex</a>
+            </li>
+            <li>
+              <a href="#hyf">hyf</a>
+            </li>
+            <li>
+              <a href="#hyf-app">hyf-app</a>
+            </li>
+            <li>
+              <a href="#hyfo">hyfo</a>
+            </li>
+            <li>
+              <a href="#nhdplusv2">nhdplusv2</a>
+            </li>
+            <li>
+              <a href="#owl">owl</a>
+            </li>
+            <li>
+              <a href="#prov">prov</a>
+            </li>
+            <li>
+              <a href="#qudt">qudt</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+            <li>
+              <a href="#schema">schema</a>
+            </li>
+            <li>
+              <a href="#sf">sf</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+            <li>
+              <a href="#sosa">sosa</a>
+            </li>
+            <li>
+              <a href="#ssn-system">ssn-system</a>
+            </li>
+            <li>
+              <a href="#xsd">xsd</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second"></ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
