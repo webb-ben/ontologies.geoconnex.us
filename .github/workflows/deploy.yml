@@ -43,7 +43,7 @@ jobs:
 
               jsonld = ttl.with_suffix(".jsonld")
               g.serialize(
-                  destination=THISDIR / 'data' / jsonld.name ,
+                  destination=THISDIR.absolute() / 'data' / jsonld.name ,
                   format="json-ld",
                   indent=2,
                   auto_compact=True
