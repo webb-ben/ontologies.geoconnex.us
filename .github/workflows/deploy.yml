@@ -25,6 +25,29 @@ jobs:
           baseuri: https://w3id.com/sal/internetofwater/ontologies.geoconnex.us
           outfolder: ./tmp/pylode-pages
 
+
+      - name: Convert TTL to JSON-LD
+        run: |
+          pip install rdflib
+          python <<'EOF'
+          from pathlib import Path
+          from rdflib import Graph
+
+          for ttl in Path(".").rglob("*.ttl"):
+              g = Graph()
+              g.parse(ttl, format="turtle")
+
+              jsonld = ttl.with_suffix(".jsonld")
+              g.serialize(
+                  destination=str(jsonld),
+                  format="json-ld",
+                  indent=2,
+                  auto_compact=True
+              )
+
+              print(f"{ttl} -> {jsonld}")
+          EOF
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         # if: ${{ github.ref == 'refs/heads/main' }}
