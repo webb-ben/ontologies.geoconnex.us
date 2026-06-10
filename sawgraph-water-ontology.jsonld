@@ -1,0 +1,1340 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "gwml2": "http://gwml2.org/def/gwml2#",
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/",
+    "hyfo": "http://hyfo.spatialai.org/v1/hyfo#",
+    "kwg-ont": "http://stko-kwg.geog.ucsb.edu/lod/ontology/",
+    "nhdplusv2": "http://nhdplusv2.spatialai.org/v1/nhdplusv2#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "quantitykind": "http://qudt.org/vocab/quantitykind/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "spatial": "http://purl.org/spatialai/spatial/spatial-full#",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "unit": "http://qudt.org/vocab/unit/",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wbd": "http://wbd.spatialai.org/v1/wbd#",
+    "wdt": "https://www.wikidata.org/prop/direct/",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "dcterms:contributor",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "dcterms:issued",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "gwml2:GW_AquiferUnit",
+      "@type": "owl:Class",
+      "dcterms:description": "Denotes aquifer-related hydrogeological units: aquifer systems, aquifers, or confining beds",
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:GW_AquiferUnit",
+      "rdfs:subClassOf": [
+        {
+          "@id": "gwml2:GW_HydrogeoUnit"
+        },
+        {
+          "@id": "hyfo:AquiferWaterFeature"
+        }
+      ]
+    },
+    {
+      "@id": "dcterms:publisher",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "gwml2:GW_Aquifer",
+      "@type": "owl:Class",
+      "dcterms:description": "A body of earth material that contains / potentially contains / potentially contained sufficient saturated permeable material to yield significant quantities of water to wells and springs (after Lohman, 1972)",
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:GW_Aquifer",
+      "rdfs:subClassOf": {
+        "@id": "gwml2:GW_AquiferUnit"
+      }
+    },
+    {
+      "@id": "qudt:hasUnit",
+      "@type": "owl:ObjectProperty",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      },
+      "rdfs:label": "qudt:hasUnit"
+    },
+    {
+      "@id": "hyf:HY_CatchmentDivide",
+      "@type": "owl:Class",
+      "dcterms:description": "One-dimensional (linear) feature that is a hydrology-specific realization of the holistic catchment",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_CatchmentDivide",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_CatchmentRealization"
+      }
+    },
+    {
+      "@id": "hyf:HY_Estuary",
+      "@type": "owl:Class",
+      "dcterms:description": "a body of surface water, participating in a hydrographic network, made special due to branching and its interaction with the open sea",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_Estuary",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_WaterBody"
+      }
+    },
+    {
+      "@id": "wbd:contributingDrainageBasin",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Relates a mainstem to the drainage basin (area) it drains",
+      "owl:inverseOf": {
+        "@id": "wbd:primaryFlowPath"
+      },
+      "rdfs:domain": {
+        "@id": "nhdplusv2:MainStem"
+      },
+      "rdfs:label": "wbd:contributingDrainageBasin",
+      "rdfs:range": {
+        "@id": "wbd:DrainageBasin"
+      }
+    },
+    {
+      "@id": "hyf:downstreamWaterBody",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies another waterbody immediately downstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the waterbody",
+      "owl:inverseOf": {
+        "@id": "hyf:upstreamWaterBody"
+      },
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:downstreamWaterBody",
+      "rdfs:subPropertyOf": {
+        "@id": "nhdplusv2:downstreamWaterBodyTC"
+      }
+    },
+    {
+      "@id": "dcterms:description",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "hyfo:SurfaceWaterFeature",
+      "@type": "owl:Class",
+      "dcterms:description": "A complete surface water feature including water, container, and void (for example: lake, river, marsh, et al.)",
+      "rdfs:label": "hyfo:SurfaceWaterFeature",
+      "rdfs:subClassOf": {
+        "@id": "hyfo:WaterFeature"
+      }
+    },
+    {
+      "@id": "geo:Feature",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "geo:Geometry"
+      },
+      "rdfs:comment": "A discrete spatial phenomenon in a universe of discourse.",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "geo:"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.0/req/core/feature-class"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class"
+        }
+      ],
+      "rdfs:label": "geo:Feature",
+      "rdfs:subClassOf": {
+        "@id": "geo:SpatialObject"
+      }
+    },
+    {
+      "@id": "hyfo:tapsAquifer",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies the aquifer a well taps",
+      "rdfs:label": "hyfo:tapsAquifer"
+    },
+    {
+      "@id": "wbd:primaryFlowPath",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Relates a drainage basin (area) to the primary mainstem flowing through it",
+      "rdfs:domain": {
+        "@id": "wbd:DrainageBasin"
+      },
+      "rdfs:label": "wbd:primaryFlowPath",
+      "rdfs:range": {
+        "@id": "nhdplusv2:MainStem"
+      }
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b18",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "hyf:HY_CatchmentRealization"
+          },
+          {
+            "@id": "hyf:HY_HydroFeature"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "nhdplusv2:hasSlope",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "The numeric average slope of a flowline",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLine"
+      },
+      "rdfs:label": "nhdplusv2:hasSlope",
+      "rdfs:range": {
+        "@id": "xsd:decimal"
+      }
+    },
+    {
+      "@id": "nhdplusv2:FlowLine",
+      "@type": "owl:Class",
+      "dcterms:description": [
+        "any atomic/elementary kind of HY_FlowPath within a given framework/context (for example, a single NHDFlowline instance)",
+        "area of associated catchment may be zero (per hydrologic fabric logic model)",
+        "can be part of at most one mainstem"
+      ],
+      "rdfs:label": "nhdplusv2:FlowLine",
+      "rdfs:subClassOf": [
+        {
+          "@id": "nhdplusv2:FlowPath"
+        },
+        {
+          "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b7"
+        }
+      ]
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b7",
+      "@type": "owl:Restriction",
+      "owl:maxQualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onClass": {
+        "@id": "nhdplusv2:MainStem"
+      },
+      "owl:onProperty": {
+        "@id": "nhdplusv2:partOfFlowPath"
+      }
+    },
+    {
+      "@id": "hyf:HY_FlowPath",
+      "@type": "owl:Class",
+      "dcterms:description": "realizes a catchment specifically as a path connecting the inflow and outflow of the catchment it realizes",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_FlowPath",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_CatchmentRealization"
+      }
+    },
+    {
+      "@id": "spatial:connectedTo",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": "topological connection (spatial contact) (sawgraph)",
+      "rdfs:subPropertyOf": {
+        "@id": "spatial:spatiallyRelatedTo"
+      }
+    },
+    {
+      "@id": "hyf:HY_CatchmentRealization",
+      "@type": "owl:Class",
+      "dcterms:description": "based on the idea that there are multiple hydrology-specific perspectives of the holistic catchment concept that are used to describe a catchment as a unit of study shared across sub-domains and studies",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_CatchmentRealization",
+      "rdfs:subClassOf": {
+        "@id": "hyfo:WaterFeatureRepresentation"
+      }
+    },
+    {
+      "@id": "hyfo:WaterFeatureRepresentation",
+      "@type": "owl:Class",
+      "dcterms:description": "A representation of a water feature (for example, a line or polygon)",
+      "rdfs:label": "hyfo:WaterFeatureRepresentation",
+      "rdfs:subClassOf": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "gwml2:gwAquiferSystem",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Relates an aquifer system part, which can be another system, aquifer or confining bed, with its aquifer system",
+      "rdfs:domain": {
+        "@id": "gwml2:GW_Aquifer"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:gwAquiferSystem",
+      "rdfs:range": {
+        "@id": "gwml2:GW_AquiferSystem"
+      }
+    },
+    {
+      "@id": "nhdplusv2:downstreamFlowPath",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies another flowpath immediately downstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the flowpath",
+      "owl:inverseOf": {
+        "@id": "nhdplusv2:upstreamFlowPath"
+      },
+      "rdfs:label": "nhdplusv2:downstreamFlowPath",
+      "rdfs:subPropertyOf": [
+        {
+          "@id": "nhdplusv2:downstreamFlowPathTC"
+        },
+        {
+          "@id": "hyf:downstreamWaterBody"
+        }
+      ]
+    },
+    {
+      "@id": "nhdplusv2:hasLevelPathId",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "The level path id of a flowline is the hydrologic sequence number of the most downstream flowline feature in the level path and is used to connect flowlines to their corresponding main stem",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLine"
+      },
+      "rdfs:label": "nhdplusv2:hasLevelPathId",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "skos:description",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "skos:note",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "http://purl.org/spatialai/spatial/water-full",
+      "@type": "owl:Ontology",
+      "dc:source": {
+        "@id": "https://raw.githubusercontent.com/SAWGraph/water-kg/refs/heads/main/ontologies/sawgraph-water-ontology.ttl"
+      },
+      "dcterms:contributor": [
+        {
+          "@id": "https://orcid.org/0000-0002-5331-5052"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-9070-3169"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-3271-6700"
+        }
+      ],
+      "dcterms:created": {
+        "@type": "xsd:date",
+        "@value": "2024-09-04"
+      },
+      "dcterms:creator": {
+        "@id": "https://orcid.org/0000-0002-9070-3169"
+      },
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "This ontology supports querying the SAWGraph Knowledge Graph. It adapts and extends concepts from HY_Features, HyFO, and GWML2"
+      },
+      "dcterms:issued": {
+        "@type": "xsd:date",
+        "@value": "2025-04-21"
+      },
+      "dcterms:modified": {
+        "@type": "xsd:date",
+        "@value": "2025-08-01"
+      },
+      "dcterms:publisher": {
+        "@id": "https://sawgraph.github.io/"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "SAWGraph's hydrology (water) ontology - an adaptation and extension of concepts from HY_Features, HyFO, and GWML2"
+      },
+      "owl:versionInfo": {
+        "@language": "en",
+        "@value": "1.0"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SAWGraph's hydrology (water) ontology - an adaptation and extension of concepts from HY_Features, HyFO, and GWML2"
+      }
+    },
+    {
+      "@id": "nhdplusv2:partOfMainStem",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Connects an elementary flowpath (e.g., NHDFlowline) to its main stem",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLine"
+      },
+      "rdfs:label": "nhdplusv2:partOfMainStem",
+      "rdfs:range": {
+        "@id": "nhdplusv2:MainStem"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "nhdplusv2:partOfFlowPath"
+      }
+    },
+    {
+      "@id": "qudt:numericValue",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      }
+    },
+    {
+      "@id": "gwml2:gwWellUnit",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies the aquifers or confining beds intersecting the well",
+      "owl:equivalentProperty": {
+        "@id": "hyfo:tapsAquifer"
+      },
+      "rdfs:domain": {
+        "@id": "gwml2:GW_Well"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:gwWellUnit",
+      "rdfs:range": {
+        "@id": "gwml2:GW_AquiferUnit"
+      }
+    },
+    {
+      "@id": "gwml2:GW_HydrogeoUnit",
+      "@type": "owl:Class",
+      "dcterms:description": "Any soil or rock unit or zone that by virtue of its hydraulic properties has a distinct influence on the storage or movement of groundwater (after ANS, 1980)",
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:GW_HydrogeoUnit"
+    },
+    {
+      "@id": "nhdplusv2:partOfFlowPath",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Connects an elementary flowpath (e.g., NHDFlowline) to any non-elementary flowpath it is a part of",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLine"
+      },
+      "rdfs:label": "nhdplusv2:partOfFlowPath",
+      "rdfs:range": {
+        "@id": "nhdplusv2:FlowPath"
+      }
+    },
+    {
+      "@id": "nhdplusv2:upstreamFlowPath",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies another flowpath immediately upstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the flowpath",
+      "owl:inverseOf": {
+        "@id": "nhdplusv2:downstreamFlowPath"
+      },
+      "rdfs:label": "nhdplusv2:upstreamFlowPath",
+      "rdfs:subPropertyOf": {
+        "@id": "hyf:upstreamWaterBody"
+      }
+    },
+    {
+      "@id": "nhdplusv2:associatedCatchmentArea",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies the one and only one catchment area that is associated with a particular flowpath",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowPath"
+      },
+      "rdfs:label": "nhdplusv2:associatedCatchmentArea",
+      "rdfs:range": {
+        "@id": "hyf:HY_CatchmentArea"
+      }
+    },
+    {
+      "@id": "nhdplusv2:downstreamWaterBodyTC",
+      "@type": [
+        "owl:ObjectProperty",
+        "owl:TransitiveProperty"
+      ],
+      "dcterms:description": "The transitive closure of the nhdplusv2:downstreamWaterBody object property",
+      "rdfs:domain": {
+        "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b1"
+      },
+      "rdfs:label": "nhdplusv2:downstreamWaterBodyTC",
+      "rdfs:range": {
+        "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b1"
+      }
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b1",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "hyf:HY_HydroFeature"
+          },
+          {
+            "@id": "hyfo:WaterFeatureRepresentation"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "dcterms:title",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b24",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "hyfo:SubsurfaceWaterFeature"
+          },
+          {
+            "@id": "hyfo:SurfaceWaterFeature"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "nhdplusv2:hasCOMID",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "Relates an NHDPlusV2 feature to its COMID",
+      "rdfs:domain": {
+        "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b4"
+      },
+      "rdfs:label": "nhdplusv2:hasCOMID",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b4",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "hyf:HY_WaterBody"
+          },
+          {
+            "@id": "nhdplusv2:FlowLine"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "hyfo:WaterWell",
+      "@type": "owl:Class",
+      "dcterms:description": "A water well, with focus on the hole/shaft itself (see gwml2:GW_Well)",
+      "owl:equivalentClass": {
+        "@id": "gwml2:GW_Well"
+      },
+      "rdfs:label": "hyfo:WaterWell",
+      "rdfs:subClassOf": {
+        "@id": "hyfo:SubsurfaceWaterFeature"
+      }
+    },
+    {
+      "@id": "nhdplusv2:containsFlowLine",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Connects a flowline catchment with its flowline(s)",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLineCatchment"
+      },
+      "rdfs:label": "nhdplusv2:containsFlowLine",
+      "rdfs:range": {
+        "@id": "nhdplusv2:FlowLine"
+      }
+    },
+    {
+      "@id": "dcterms:modified",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b27",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "hyfo:WaterFeature"
+          },
+          {
+            "@id": "hyfo:WaterFeatureRepresentation"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "nhdplusv2:MainStem",
+      "@type": "owl:Class",
+      "dcterms:description": "a named river or similar feature, represented from head to outlet (a composition of elemenatry flowpaths (flowlines) per hydrologic fabric logic model)",
+      "rdfs:label": "nhdplusv2:MainStem",
+      "rdfs:subClassOf": {
+        "@id": "nhdplusv2:FlowPath"
+      }
+    },
+    {
+      "@id": "geo:defaultGeometry",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.",
+      "rdfs:domain": {
+        "@id": "geo:Feature"
+      },
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "geo:"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties"
+        }
+      ],
+      "rdfs:label": "geo:defaultGeometry",
+      "rdfs:range": {
+        "@id": "geo:Geometry"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "geo:hasGeometry"
+      }
+    },
+    {
+      "@id": "hyfo:SubsurfaceWaterFeature",
+      "@type": "owl:Class",
+      "dcterms:description": "A complete subsurface water feature including water, container, and void (for example, aquifer, well, et al.)",
+      "rdfs:label": "hyfo:SubsurfaceWaterFeature",
+      "rdfs:subClassOf": {
+        "@id": "hyfo:WaterFeature"
+      }
+    },
+    {
+      "@id": "nhdplusv2:downstreamFlowPathTC",
+      "@type": [
+        "owl:ObjectProperty",
+        "owl:TransitiveProperty"
+      ],
+      "dcterms:description": "The transitive closure of the nhdplusv2:downstreamFlowPath object property",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowPath"
+      },
+      "rdfs:label": "nhdplusv2:downstreamFlowPathTC",
+      "rdfs:range": {
+        "@id": "nhdplusv2:FlowPath"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "nhdplusv2:downstreamWaterBodyTC"
+      }
+    },
+    {
+      "@id": "dcterms:created",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "qudt:hasQuantityKind",
+      "@type": "owl:ObjectProperty",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      },
+      "rdfs:label": "qudt:hasQuantityKind",
+      "rdfs:range": {
+        "@id": "qudt:QuantityKind"
+      }
+    },
+    {
+      "@id": "qudt:QuantityValue",
+      "@type": "owl:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      },
+      "rdfs:label": "qudt:QuantityValue"
+    },
+    {
+      "@id": "dcterms:creator",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "nhdplusv2:hasFTYPE",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "Relates an NHDPlusV2 feature to its FTYPE (see also nhdplusv2:hasFCODE)",
+      "rdfs:domain": {
+        "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b4"
+      },
+      "rdfs:label": "nhdplusv2:hasFTYPE",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "skos:prefLabel",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "skos:example",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "hyf:HY_CatchmentArea",
+      "@type": "owl:Class",
+      "dcterms:description": "Two-dimensional (areal) hydrology-specific realization of the holistic catchment",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_CatchmentArea",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_CatchmentRealization"
+      }
+    },
+    {
+      "@id": "nhdplusv2:FlowPathLength",
+      "@type": "owl:Class",
+      "dcterms:description": "The length of a flowpath",
+      "rdfs:label": "nhdplusv2:FlowPathLength",
+      "rdfs:subClassOf": {
+        "@id": "qudt:Quantity"
+      }
+    },
+    {
+      "@id": "nhdplusv2:hasFlowPathLength",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Relates any flowpath to its length, represented as, for example, a qudt:Quantity object",
+      "rdfs:label": "nhdplusv2:hasFlowPathLength",
+      "rdfs:range": {
+        "@id": "qudt:Quantity"
+      }
+    },
+    {
+      "@id": "skos:definition",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "hyfo:WaterFeature",
+      "@type": "owl:Class",
+      "dcterms:description": "A complete water feature including water, container, and void; includes surface and subsurface water features",
+      "rdfs:label": "hyfo:WaterFeature",
+      "rdfs:subClassOf": {
+        "@id": "geo:Feature"
+      }
+    },
+    {
+      "@id": "nhdplusv2:hasReachCode",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "Relates an NHDPlusV2 feature to its ReachCode",
+      "rdfs:domain": {
+        "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b4"
+      },
+      "rdfs:label": "nhdplusv2:hasReachCode",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "gwml2:gwAquiferSystemPart",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Relates an aquifer system with its parts, which can be other systems, aquifers or confining beds",
+      "owl:inverseOf": {
+        "@id": "gwml2:gwAquiferSystem"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:gwAquiferSystemPart"
+    },
+    {
+      "@id": "hyfo:HydroRockBody",
+      "@type": "owl:Class",
+      "dcterms:description": "a hybrid physical object, such as aquifer, well, or lake, that consists partly of a rock body (a container), empty spaces therein (voids), and a water body inside the space",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.tandfonline.com/doi/pdf/10.1080/13658816.2018.1443751"
+      },
+      "rdfs:label": "hyfo:HydroRockBody",
+      "rdfs:subClassOf": {
+        "@id": "hyfo:SubsurfaceWaterFeature"
+      }
+    },
+    {
+      "@id": "qudt:Unit",
+      "@type": "owl:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      },
+      "rdfs:label": "qudt:Unit"
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b21",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "hyfo:AquiferWaterFeature"
+          },
+          {
+            "@id": "hyfo:WaterWell"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "nhdplusv2:hasMainStemId",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "Relates a nhdplusv2:MainStem feature to its unique identifier",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:MainStem"
+      },
+      "rdfs:label": "nhdplusv2:hasMainStemId",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "skos:editorialNote",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "nhdplusv2:divergence",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "Indicates if a nhdplusv2:FlowLine is the main-path or a minor-path of a divergence (no triple if no divergence)",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLine"
+      },
+      "rdfs:label": "nhdplusv2:divergence",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "nhdplusv2:partOfWaterBody",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Connects an elementary flowpath to a waterbody it lies within",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLine"
+      },
+      "rdfs:label": "nhdplusv2:partOfWaterBody",
+      "rdfs:range": {
+        "@id": "hyf:HY_WaterBody"
+      }
+    },
+    {
+      "@id": "nhdplusv2:hasFCODE",
+      "@type": "owl:DatatypeProperty",
+      "dcterms:description": "Relates an NHDPlusV2 feature to its FCODE (see also nhdplusv2:hasFTYPE)",
+      "rdfs:domain": {
+        "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b4"
+      },
+      "rdfs:label": "nhdplusv2:hasFCODE",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "wbd:containingHUC",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Relates a flowline catchment to any WBD drainage basin it lies within",
+      "rdfs:domain": {
+        "@id": "nhdplusv2:FlowLineCatchment"
+      },
+      "rdfs:label": "wbd:containingHUC",
+      "rdfs:range": {
+        "@id": "wbd:DrainageBasin"
+      }
+    },
+    {
+      "@id": "geo:SpatialObject",
+      "@type": "owl:Class",
+      "rdfs:comment": "Anything spatial (being or having a shape, position or an extent).",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "geo:"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.0/req/core/spatial-object-class"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class"
+        }
+      ],
+      "rdfs:label": "geo:SpatialObject"
+    },
+    {
+      "@id": "nhdplusv2:FlowLineCatchment",
+      "@type": "owl:Class",
+      "dcterms:description": "The catchment polygon for a nhdplusv2:FlowLine",
+      "rdfs:label": "nhdplusv2:FlowLineCatchment",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_DendriticCatchment"
+      }
+    },
+    {
+      "@id": "geo:hasGeometry",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "A spatial representation for a given Feature.",
+      "rdfs:domain": {
+        "@id": "geo:Feature"
+      },
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "geo:"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/feature-properties"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties"
+        }
+      ],
+      "rdfs:label": "geo:hasGeometry",
+      "rdfs:range": {
+        "@id": "geo:Geometry"
+      }
+    },
+    {
+      "@id": "qudt:Quantity",
+      "@type": "owl:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      },
+      "rdfs:label": "qudt:Quantity"
+    },
+    {
+      "@id": "hyf:HY_HydroFeature",
+      "@type": "owl:Class",
+      "dcterms:description": "a basic feature to reflect the properties that all hydrologic features have",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_HydroFeature",
+      "rdfs:subClassOf": {
+        "@id": "geo:Feature"
+      }
+    },
+    {
+      "@id": "gwml2:GW_MonitoringSite",
+      "@type": "owl:Class",
+      "dcterms:description": "Site of observation related to groundwater",
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:GW_MonitoringSite"
+    },
+    {
+      "@id": "hyf:HY_Catchment",
+      "@type": "owl:Class",
+      "dcterms:description": "captures the union of catchment and hydro nexus, and the multiple realizations of the holistic catchment concept",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_Catchment",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_HydroFeature"
+      }
+    },
+    {
+      "@id": "nhdplusv2:FlowPath",
+      "@type": "owl:Class",
+      "dcterms:description": "any non-atomic/non-elementary kind of HY_FlowPath comprised of a contiguous set of atomic/elementary flowpaths",
+      "rdfs:label": "nhdplusv2:FlowPath",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_FlowPath"
+      }
+    },
+    {
+      "@id": "hyf:upstreamWaterBody",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies another waterbody immediately upstream, allowing network navigation without knowing an inflow or outflow of the catchment realized by the waterbody",
+      "owl:inverseOf": {
+        "@id": "hyf:downstreamWaterBody"
+      },
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:upstreamWaterBody"
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b15",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "hyf:HY_CatchmentArea"
+          },
+          {
+            "@id": "hyf:HY_CatchmentDivide"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "geo:Geometry",
+      "@type": "owl:Class",
+      "rdfs:comment": "A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS).",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "geo:"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class"
+        },
+        {
+          "@id": "http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-class"
+        }
+      ],
+      "rdfs:label": "geo:Geometry",
+      "rdfs:subClassOf": {
+        "@id": "geo:SpatialObject"
+      }
+    },
+    {
+      "@id": "hyf:HY_Canal",
+      "@type": "owl:Class",
+      "dcterms:description": "a body of surface water, participating in a hydrographic network, that is special due to its artificial origin (man-made)",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_Canal",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_WaterBody"
+      }
+    },
+    {
+      "@id": "dc:source",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "gwml2:GW_AquiferSystem",
+      "@type": "owl:Class",
+      "dcterms:description": "A body of permeable and poorly permeable material that functions regionally as a water-yielding unit; it comprises two or more permeable beds separated at least locally by confining beds that impede groundwater movement but do not greatly affect the regional hydraulic continuity of the system; includes both saturated and unsaturated parts of permeable material (after ASCE, 1987)",
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:GW_AquiferSystem",
+      "rdfs:subClassOf": {
+        "@id": "gwml2:GW_AquiferUnit"
+      }
+    },
+    {
+      "@id": "hyf:HY_Lake",
+      "@type": "owl:Class",
+      "dcterms:description": "a body of surface water, participating in a hydrographic network, made special due to its considerable size",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_Lake",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_WaterBody"
+      }
+    },
+    {
+      "@id": "schema:name",
+      "@type": "owl:AnnotationProperty"
+    },
+    {
+      "@id": "hyfo:AquiferWaterFeature",
+      "@type": "owl:Class",
+      "dcterms:description": "An aquifer water feature including water, container, and void",
+      "rdfs:label": "hyfo:AquiferWaterFeature",
+      "rdfs:subClassOf": {
+        "@id": "hyfo:SubsurfaceWaterFeature"
+      }
+    },
+    {
+      "@id": "hyfo:isRepresentedByWFR",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Relates a water feature to a representation of that water feature",
+      "rdfs:domain": {
+        "@id": "hyfo:WaterFeature"
+      },
+      "rdfs:label": "hyfo:isRepresentedByWFR",
+      "rdfs:range": {
+        "@id": "hyfo:WaterFeatureRepresentation"
+      }
+    },
+    {
+      "@id": "hyf:HY_Impoundment",
+      "@type": "owl:Class",
+      "dcterms:description": "a body of surface water, participating in a hydrographic network, seen as being special due to being formed by collecting water, for example in the case of a dam",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_Impoundment",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_WaterBody"
+      }
+    },
+    {
+      "@id": "hyf:HY_Lagoon",
+      "@type": "owl:Class",
+      "dcterms:description": "a body of surface water, participating in a hydrographic network, which is special due to its shallow depth and interaction with the open sea",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_Lagoon",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_WaterBody"
+      }
+    },
+    {
+      "@id": "gwml2:gwMonitoringHost",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies the feature hosting the site [GW_MonitoringSite], e.g., a well, spring, lake or stream",
+      "rdfs:domain": {
+        "@id": "gwml2:GW_MonitoringSite"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:gwMonitoringHost",
+      "rdfs:range": {
+        "@id": "hyfo:WaterFeature"
+      }
+    },
+    {
+      "@id": "spatial:spatiallyRelatedTo",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": "topological connection (spatial contact) (sawgraph)"
+    },
+    {
+      "@id": "qudt:quantityValue",
+      "@type": "owl:ObjectProperty",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      },
+      "rdfs:label": "qudt:quantityValue",
+      "rdfs:range": {
+        "@id": "qudt:QuantityValue"
+      }
+    },
+    {
+      "@id": "hyf:HY_DendriticCatchment",
+      "@type": "owl:Class",
+      "dcterms:description": "a catchment which is determined by a single common downstream catchment",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_DendriticCatchment",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_Catchment"
+      }
+    },
+    {
+      "@id": "hyf:HY_WaterBody",
+      "@type": "owl:Class",
+      "dcterms:description": "A waterbody is part of the hydrographic network and is either standing in a depression or flowing in a channel, which are parts of the channel network",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_WaterBody",
+      "rdfs:subClassOf": [
+        {
+          "@id": "hyf:HY_HydroFeature"
+        },
+        {
+          "@id": "hyfo:SurfaceWaterFeature"
+        }
+      ]
+    },
+    {
+      "@id": "_:nb8351bb0dc9b4a6f8a605949b941e849b8",
+      "@type": "owl:AllDisjointClasses",
+      "owl:members": {
+        "@list": [
+          {
+            "@id": "hyf:HY_Canal"
+          },
+          {
+            "@id": "hyf:HY_Estuary"
+          },
+          {
+            "@id": "hyf:HY_Impoundment"
+          },
+          {
+            "@id": "hyf:HY_Lagoon"
+          },
+          {
+            "@id": "hyf:HY_Lake"
+          },
+          {
+            "@id": "hyf:HY_River"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "wbd:DrainageBasin",
+      "@type": "owl:Class",
+      "dcterms:description": "A HUC12 watershed (drainage area) from the WBD",
+      "rdfs:label": "wbd:DrainageBasin",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_DendriticCatchment"
+      }
+    },
+    {
+      "@id": "gwml2:GW_Well",
+      "@type": "owl:Class",
+      "dcterms:description": "A shaft or hole sunk, dug or drilled into the Earth to observe, extract or inject water (after IGH1397)",
+      "owl:equivalentClass": {
+        "@id": "hyfo:WaterWell"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://docs.ogc.org/is/19-013/19-013.html"
+      },
+      "rdfs:label": "gwml2:GW_Well",
+      "rdfs:subClassOf": {
+        "@id": "hyfo:SubsurfaceWaterFeature"
+      }
+    },
+    {
+      "@id": "qudt:QuantityKind",
+      "@type": "owl:Class",
+      "rdfs:isDefinedBy": {
+        "@id": "http://qudt.org/2.1/schema/qudt"
+      },
+      "rdfs:label": "qudt:QuantityKind"
+    },
+    {
+      "@id": "hyf:realizedCatchment",
+      "@type": "owl:ObjectProperty",
+      "dcterms:description": "Identifies the one and only one catchment that is realized by a particular feature",
+      "rdfs:domain": {
+        "@id": "hyf:HY_CatchmentRealization"
+      },
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:realizedCatchment",
+      "rdfs:range": {
+        "@id": "hyf:HY_Catchment"
+      }
+    },
+    {
+      "@id": "hyf:HY_River",
+      "@type": "owl:Class",
+      "dcterms:description": "a body of surface water, participating in a hydrographic network, which is special due to its property to permanently or temporarily flow",
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://docs.ogc.org/is/14-111r6/14-111r6.html"
+        },
+        {
+          "@id": "https://github.com/opengeospatial/HY_Features/tree/master/ontology"
+        }
+      ],
+      "rdfs:label": "hyf:HY_River",
+      "rdfs:subClassOf": {
+        "@id": "hyf:HY_WaterBody"
+      }
+    }
+  ]
+}
