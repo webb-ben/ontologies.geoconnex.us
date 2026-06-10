@@ -31,9 +31,11 @@ jobs:
           python <<'EOF'
           from pathlib import Path
           from rdflib import Graph
+          import os
           
           THISDIR = Path(".")
           (THISDIR / 'data').mkdir(parents=True, exist_ok=True)
+          os.chown(THISDIR / 'data', os.getuid(), os.getgid())
 
           for ttl in THISDIR.rglob("*.ttl"):
               g = Graph()
