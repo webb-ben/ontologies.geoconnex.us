@@ -22,9 +22,8 @@ jobs:
       - name: Build Pages
         uses: vliz-be-opsci/pylode-to-pages@v0
         with:
-          baseuri: https://w3id.com/sal/internetofwater/ontologies.geoconnex.us
-          outfolder: ./tmp/pylode-pages
-
+          baseuri: https://w3id.com/sal/${{ github.repository_owner }}/${{ github.event.repository.name }}
+          outfolder: ./data
 
       - name: Convert TTL to JSON-LD
         run: |
@@ -32,14 +31,17 @@ jobs:
           python <<'EOF'
           from pathlib import Path
           from rdflib import Graph
+          
+          THISDIR = Path(".")
+          (THISDIR / 'data').mkdir(parents=True, exist_ok=True)
 
-          for ttl in Path(".").rglob("*.ttl"):
+          for ttl in THISDIR.rglob("*.ttl"):
               g = Graph()
               g.parse(ttl, format="turtle")
 
               jsonld = ttl.with_suffix(".jsonld")
               g.serialize(
-                  destination=str(jsonld),
+                  destination=THISDIR / 'data' / jsonld.name ,
                   format="json-ld",
                   indent=2,
                   auto_compact=True
@@ -50,7 +52,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        # if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ always() }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./tmp/pylode-pages
+          publish_dir: ./data
